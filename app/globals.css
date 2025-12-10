@@ -1,7 +1,5 @@
 @import "tailwindcss";
 
-@import "tailwindcss";
-
 :root {
   --color-navy: #0b1120;
   --color-gold: #fbbf24;
@@ -21,6 +19,7 @@ body {
   background: var(--color-light);
   color: #0f172a;
   font-family: var(--font-poppins), "Inter", system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
 }
 
 * {
@@ -35,4 +34,20 @@ a {
 ::selection {
   background: var(--color-gold);
   color: #0b1120;
+}
+
+.balanced {
+  text-wrap: balance;
+}
+
+@supports not (text-wrap: balance) {
+  .balanced {
+    word-break: break-word;
+  }
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
 }

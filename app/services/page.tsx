@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const ServicesPage = () => {
   return (
     <div className="bg-white">
-      <section className="border-b border-slate-100 bg-gradient-to-br from-[var(--color-light)] via-white to-[#eef2ff] py-14">
+      <section className="border-b border-slate-100 bg-gradient-to-br from-[var(--color-light)] via-white to-[#eef2ff] py-12 sm:py-14">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-[2fr,1fr] lg:items-center">
             <div className="space-y-4">
@@ -44,9 +44,9 @@ const ServicesPage = () => {
                 </span>
               </div>
             </div>
-            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-lg shadow-slate-100">
+            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-lg shadow-slate-100 sm:p-7">
               <div className="text-sm font-semibold text-[var(--color-navy)]">Need guidance?</div>
-              <p className="mt-2 text-sm text-slate-600">
+              <p className="balanced mt-2 text-sm text-slate-600">
                 Tell us what you need and we will map the right package, timeline, and government steps for your case.
               </p>
               <Link
@@ -60,7 +60,7 @@ const ServicesPage = () => {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
+      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-14 lg:px-8">
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
             <div
@@ -71,9 +71,9 @@ const ServicesPage = () => {
                 <div className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-gold)]">
                   {service.tagline}
                 </div>
-                <h2 className="mt-2 text-lg font-semibold text-[var(--color-navy)]">{service.name}</h2>
+                <h2 className="balanced mt-2 text-lg font-semibold text-[var(--color-navy)]">{service.name}</h2>
               </div>
-              <p className="text-sm text-slate-600">{service.description}</p>
+              <p className="balanced text-sm text-slate-600">{service.description}</p>
               <div className="mt-auto text-sm text-slate-500">
                 <div>
                   <span className="font-semibold text-[var(--color-navy)]">Processing:</span> {service.processingTime}

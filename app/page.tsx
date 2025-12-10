@@ -47,7 +47,7 @@ export default function Home() {
         ]}
       />
 
-      <section id="services" className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
+      <section id="services" className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
         <SectionTitle
           eyebrow="Services"
           title="Our Core Services"
@@ -67,7 +67,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-white py-16">
+      <section className="bg-white py-12 sm:py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <SectionTitle
             eyebrow="Why choose us"
@@ -97,8 +97,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
-        <div className="rounded-3xl bg-white p-10 shadow-xl shadow-slate-100">
+      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
+        <div className="rounded-3xl bg-white p-6 shadow-xl shadow-slate-100 sm:p-8 lg:p-10">
           <div className="flex flex-col gap-10 lg:flex-row lg:items-center">
             <div className="lg:w-1/2">
               <SectionTitle
@@ -134,15 +134,15 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-[var(--color-navy)] py-16 text-white">
+      <section className="bg-[var(--color-navy)] py-12 sm:py-16 text-white">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
             <div className="space-y-4">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-gold)]">
                 Business Setup
               </p>
-              <h3 className="text-3xl font-semibold">Business Setup (Mainland & Freezone)</h3>
-              <p className="text-base text-slate-200">
+              <h3 className="balanced text-3xl font-semibold">Business Setup (Mainland & Freezone)</h3>
+              <p className="balanced text-base text-slate-200">
                 Choose the right jurisdiction, secure your trade license, and plan visas with a
                 clear roadmap. We simplify mainland company formation, freezone options, and bank
                 account introductions so you can launch fast.
@@ -188,7 +188,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-white py-16">
+      <section className="bg-white py-12 sm:py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <SectionTitle
             eyebrow="Proof"
@@ -204,7 +204,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
+      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
           <div>
             <SectionTitle
@@ -223,7 +223,7 @@ export default function Home() {
 
       <section
         id="contact"
-        className="relative overflow-hidden bg-gradient-to-r from-[var(--color-navy)] via-[#0f1933] to-[var(--color-navy)] py-14 text-white"
+        className="relative overflow-hidden bg-gradient-to-r from-[var(--color-navy)] via-[#0f1933] to-[var(--color-navy)] py-12 text-white sm:py-14"
       >
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(251,191,36,0.12),_transparent_45%)]" />
         <div className="relative mx-auto flex max-w-6xl flex-col items-start gap-6 px-4 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
@@ -231,10 +231,10 @@ export default function Home() {
             <div className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-gold)]">
               Start today
             </div>
-            <h3 className="text-2xl font-semibold sm:text-3xl">
+            <h3 className="balanced text-2xl font-semibold sm:text-3xl">
               Ready to start your UAE journey?
             </h3>
-            <p className="text-slate-200">
+            <p className="balanced text-slate-200">
               Tell us about your plans. We respond within one business day with next steps.
             </p>
           </div>

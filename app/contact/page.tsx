@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 const ContactPage = () => {
   return (
     <div className="bg-white">
-      <section className="border-b border-slate-100 bg-gradient-to-br from-[var(--color-light)] via-white to-[#eef2ff] py-14">
+      <section className="border-b border-slate-100 bg-gradient-to-br from-[var(--color-light)] via-white to-[#eef2ff] py-12 sm:py-14">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <SectionTitle
             eyebrow="Contact"
@@ -28,11 +28,11 @@ const ContactPage = () => {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
+      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-14 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-[1.1fr,0.9fr] lg:items-start">
-          <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-lg shadow-slate-100">
+          <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-lg shadow-slate-100 sm:p-8">
             <div className="text-sm font-semibold text-[var(--color-navy)]">Contact details</div>
-            <p className="mt-2 text-sm text-slate-600">
+            <p className="balanced mt-2 text-sm text-slate-600">
               Reach us via WhatsApp, phone, or email. We will align on timelines, costs, and required documents before any submission.
             </p>
             <div className="mt-6 space-y-3 text-sm text-slate-700">
@@ -55,7 +55,7 @@ const ContactPage = () => {
             </div>
           </div>
 
-          <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-lg shadow-slate-100">
+          <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-lg shadow-slate-100 sm:p-8">
             <ContactForm />
           </div>
         </div>

@@ -12,10 +12,10 @@ const Footer = () => {
   return (
     <footer className="border-t border-slate-200 bg-white">
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
-        <div className="grid gap-10 md:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-3 md:gap-10">
           <div>
             <div className="text-lg font-semibold text-[var(--color-navy)]">KEYA PRO DESK UAE</div>
-            <p className="mt-3 text-sm text-slate-600">
+            <p className="balanced mt-3 max-w-md text-sm leading-relaxed text-slate-600">
               Smart PRO, visa, and business setup support for founders, freelancers, and enterprises
               across the UAE. We manage the paperwork; you focus on growth.
             </p>

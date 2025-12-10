@@ -24,7 +24,7 @@ const Navbar = () => {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-100 bg-white/90 backdrop-blur shadow-lg shadow-black/5">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between gap-4 py-4">
+        <div className="flex items-center justify-between gap-4 py-3 sm:py-4">
           <Link href="/" className="flex items-center gap-2">
             <div className="rounded-xl bg-[var(--color-gold)] px-2 py-1 text-xs font-semibold text-[var(--color-navy)]">
               KEYA

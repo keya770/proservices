@@ -40,17 +40,19 @@ const ServicePage = ({ params }: { params: { slug: string } }) => {
 
   return (
     <div className="bg-white">
-      <section className="relative overflow-hidden bg-[var(--color-navy)] py-14 text-white">
+      <section className="relative overflow-hidden bg-[var(--color-navy)] py-12 text-white sm:py-14">
         <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-navy)] via-[#0f1b34] to-[#0b1120] opacity-90" />
         <div className="absolute right-10 top-6 h-40 w-40 rounded-full bg-[var(--color-gold)]/15 blur-3xl" />
         <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-gold)]">PRO Services</p>
-          <h1 className="mt-3 text-3xl font-semibold sm:text-4xl">{service?.name}</h1>
-          <p className="mt-3 max-w-3xl text-base text-slate-200">{currentService.tagline}</p>
+          <h1 className="balanced mt-3 text-3xl font-semibold leading-tight sm:text-4xl">
+            {service?.name}
+          </h1>
+          <p className="balanced mt-3 max-w-3xl text-base text-slate-200">{currentService.tagline}</p>
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
+      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-14 lg:px-8">
         <div className="grid gap-8 lg:grid-cols-[2fr,1fr]">
           <div className="space-y-6">
             <SectionTitle
@@ -133,9 +135,9 @@ const ServicePage = ({ params }: { params: { slug: string } }) => {
           </div>
 
           <div className="space-y-6 lg:sticky lg:top-28">
-            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-lg shadow-slate-100">
+            <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-lg shadow-slate-100 sm:p-6">
               <div className="text-sm font-semibold text-[var(--color-navy)]">Summary</div>
-              <p className="mt-2 text-sm text-slate-600">{currentService.shortDescription}</p>
+              <p className="balanced mt-2 text-sm text-slate-600">{currentService.shortDescription}</p>
               <div className="mt-4 space-y-2 text-sm text-slate-600">
                 <div>
                   <span className="font-semibold text-[var(--color-navy)]">Processing:</span> {currentService.processingTime}

@@ -37,27 +37,27 @@ const values = [
 const AboutPage = () => {
   return (
     <div className="bg-white">
-      <section className="border-b border-slate-100 bg-gradient-to-br from-[var(--color-light)] via-white to-[#eef2ff] py-14">
+      <section className="border-b border-slate-100 bg-gradient-to-br from-[var(--color-light)] via-white to-[#eef2ff] py-12 sm:py-14">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <SectionTitle
             eyebrow="About"
             title="Our vision for UAE entrepreneurs & professionals"
             subtitle="We are a team of PRO and business setup specialists obsessed with making UAE compliance effortless."
           />
-          <p className="mt-6 max-w-3xl text-sm text-slate-700 sm:text-base">
+          <p className="balanced mt-6 max-w-3xl text-sm text-slate-700 sm:text-base">
             We built KEYA PRO DESK UAE to bridge the gap between fast-growing businesses and complex government processes. Our consultants have guided hundreds of founders, HR teams, and freelancers through visas, fine waivers, and company formation with clarity and confidence.
           </p>
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
+      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-14 lg:px-8">
         <div className="grid gap-8 lg:grid-cols-[1.1fr,0.9fr] lg:items-center">
           <div className="space-y-4">
-            <h3 className="text-2xl font-semibold text-[var(--color-navy)]">Our story</h3>
-            <p className="text-sm text-slate-700 sm:text-base">
+            <h3 className="balanced text-2xl font-semibold text-[var(--color-navy)]">Our story</h3>
+            <p className="balanced text-sm text-slate-700 sm:text-base">
               We saw how teams lost time juggling government portals, document requirements, and ever-changing rules. Today, we run a concierge-style desk that handles every submission, status update, and follow-up for you—whether you are setting up a company, onboarding staff, or securing your own residency.
             </p>
-            <p className="text-sm text-slate-700 sm:text-base">
+            <p className="balanced text-sm text-slate-700 sm:text-base">
               With bilingual specialists, government relationships, and structured checklists, we give you predictable timelines and the peace of mind that every detail is covered.
             </p>
             <Link
@@ -67,7 +67,7 @@ const AboutPage = () => {
               Speak with our team
             </Link>
           </div>
-          <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-xl shadow-slate-100">
+          <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-xl shadow-slate-100 sm:p-7">
             <div className="text-sm font-semibold text-[var(--color-navy)]">Our services today</div>
             <ul className="mt-4 space-y-3 text-sm text-slate-700">
               <li>• PRO desk for labor, immigration, attestations, and renewals</li>
@@ -80,7 +80,7 @@ const AboutPage = () => {
         </div>
       </section>
 
-      <section className="bg-white py-14">
+      <section className="bg-white py-12 sm:py-14">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <SectionTitle
             eyebrow="Values"
@@ -105,15 +105,15 @@ const AboutPage = () => {
         </div>
       </section>
 
-      <section className="bg-[var(--color-navy)] py-14 text-white">
+      <section className="bg-[var(--color-navy)] py-12 text-white sm:py-14">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-8 md:grid-cols-2 md:items-center">
             <div className="space-y-3">
               <div className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-gold)]">
                 Our team
               </div>
-              <h3 className="text-2xl font-semibold">Specialists across PRO, visas, and setup</h3>
-              <p className="text-sm text-slate-200">
+              <h3 className="balanced text-2xl font-semibold">Specialists across PRO, visas, and setup</h3>
+              <p className="balanced text-sm text-slate-200">
                 Your case is handled by dedicated consultants who coordinate every authority interaction and keep you updated across WhatsApp and email.
               </p>
             </div>
@@ -134,11 +134,11 @@ const AboutPage = () => {
         </div>
       </section>
 
-      <section className="bg-white py-12">
+      <section className="bg-white py-10 sm:py-12">
         <div className="mx-auto flex max-w-6xl flex-col gap-4 px-4 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
           <div>
-            <h3 className="text-xl font-semibold text-[var(--color-navy)]">Ready to move forward?</h3>
-            <p className="text-sm text-slate-600">Book a consultation and get a tailored roadmap for your case.</p>
+            <h3 className="balanced text-xl font-semibold text-[var(--color-navy)]">Ready to move forward?</h3>
+            <p className="balanced text-sm text-slate-600">Book a consultation and get a tailored roadmap for your case.</p>
           </div>
           <Link
             href="/contact"

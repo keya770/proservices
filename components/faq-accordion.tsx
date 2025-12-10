@@ -25,7 +25,7 @@ const FAQAccordion = ({ items }: Props) => {
               onClick={() => setOpenIndex(isOpen ? null : index)}
               aria-expanded={isOpen}
             >
-              <span className="text-sm font-semibold text-[var(--color-navy)] sm:text-base">
+              <span className="balanced text-sm font-semibold text-[var(--color-navy)] sm:text-base">
                 {item.question}
               </span>
               <ChevronDownIcon
@@ -34,7 +34,7 @@ const FAQAccordion = ({ items }: Props) => {
                 }`}
               />
             </button>
-            {isOpen && <p className="mt-3 text-sm text-slate-600">{item.answer}</p>}
+            {isOpen && <p className="balanced mt-3 text-sm text-slate-600">{item.answer}</p>}
           </div>
         );
       })}

@@ -15,11 +15,11 @@ const ServiceCard = ({ service, icon }: Props) => {
           {icon ?? <span className="text-lg font-bold">★</span>}
         </div>
         <div>
-          <h3 className="text-lg font-semibold text-[var(--color-navy)]">{service.name}</h3>
-          <p className="text-xs text-slate-500">{service.tagline}</p>
+          <h3 className="balanced text-lg font-semibold text-[var(--color-navy)]">{service.name}</h3>
+          <p className="balanced text-xs text-slate-500">{service.tagline}</p>
         </div>
       </div>
-      <p className="text-sm text-slate-600">{service.shortDescription}</p>
+      <p className="balanced text-sm text-slate-600">{service.shortDescription}</p>
       <Link
         href={`/services/${service.slug}`}
         className="mt-auto inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-navy)] transition group-hover:gap-3"
