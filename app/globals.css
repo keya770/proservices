@@ -137,11 +137,18 @@ video {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(120deg, rgba(255, 255, 255, 0) 35%, rgba(255, 255, 255, 0.35) 50%, rgba(255, 255, 255, 0) 65%);
-  background-size: 200% 100%;
-  opacity: 0.65;
-  filter: blur(0.6px);
-  animation: headerSheen 10s ease-in-out infinite;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 25%,
+    rgba(255, 255, 255, 0.2) 40%,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(255, 255, 255, 0.2) 60%,
+    rgba(255, 255, 255, 0) 75%
+  );
+  background-size: 320% 100%;
+  opacity: 0.8;
+  filter: blur(1px);
+  animation: headerSheen 7s ease-in-out infinite;
   pointer-events: none;
 }
 
@@ -150,9 +157,9 @@ video {
     background-position: -80% 0;
   }
   50% {
-    background-position: 50% 0;
+    background-position: 60% 0;
   }
   100% {
-    background-position: 180% 0;
+    background-position: 200% 0;
   }
 }
