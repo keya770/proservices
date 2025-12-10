@@ -43,25 +43,12 @@ const ContactForm = () => {
     setStatus("loading");
     setFeedback("");
 
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
-
-      const data = await response.json();
-      if (!response.ok || !data.success) {
-        throw new Error(data?.message || "Failed to submit. Please try again.");
-      }
-
+    // Client-side acknowledgement for static deployment; replace with real endpoint when ready.
+    setTimeout(() => {
       setStatus("success");
-      setFeedback(data.message);
+      setFeedback("Thank you, we'll reach out shortly.");
       setPayload(initialState);
-    } catch (error) {
-      setStatus("error");
-      setFeedback(error instanceof Error ? error.message : "Something went wrong.");
-    }
+    }, 500);
   };
 
   return (

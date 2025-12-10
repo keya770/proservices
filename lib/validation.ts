@@ -18,8 +18,8 @@ export type EnquiryPayload = {
 
 export type ValidationErrors<T> = Partial<Record<keyof T | "agree", string>>;
 
-const emailRegex = /^[\\w-.]+@[\\w-]+\\.[\\w-.]+$/;
-const phoneRegex = /^[+]?[-0-9\\s]{6,20}$/;
+const emailRegex = /^[\w.-]+@[\w-]+\.[\w.-]+$/;
+const phoneRegex = /^\+?[\d\s-]{6,20}$/;
 
 const isEmpty = (value?: string) => !value || value.trim().length === 0;
 
