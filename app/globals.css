@@ -137,9 +137,22 @@ video {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.28), transparent);
-  opacity: 0.55;
-  transform: translateX(-80%);
-  animation: sheenSlide 12s linear infinite;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0) 35%, rgba(255, 255, 255, 0.35) 50%, rgba(255, 255, 255, 0) 65%);
+  background-size: 200% 100%;
+  opacity: 0.65;
+  filter: blur(0.6px);
+  animation: headerSheen 10s ease-in-out infinite;
   pointer-events: none;
+}
+
+@keyframes headerSheen {
+  0% {
+    background-position: -80% 0;
+  }
+  50% {
+    background-position: 50% 0;
+  }
+  100% {
+    background-position: 180% 0;
+  }
 }
