@@ -5,14 +5,14 @@ import { services } from "@/lib/services";
 import { ShieldCheckIcon, DocumentCheckIcon, ClockIcon, ArrowRightIcon } from "@heroicons/react/24/outline";
 
 export const metadata: Metadata = {
-  title: "UAE PRO & Visa Services Overview | KEYA PRO DESK UAE",
+  title: "UAE PRO & Visa Services Overview | HCT Services (AL HASEL Consultancy)",
   description:
-    "Explore UAE PRO services, fine waiver applications, freelance and employment visas, and business setup support across Dubai mainland and freezones.",
+    "Explore PRO services, 2-year freelance visas, employment visas, fine waiver assistance, and business setup support across Dubai mainland and freezones.",
   openGraph: {
-    title: "UAE PRO & Visa Services Overview | KEYA PRO DESK UAE",
+    title: "UAE PRO & Visa Services Overview | HCT Services (AL HASEL Consultancy)",
     description:
       "Full catalogue of UAE PRO services, visa processing, fine waiver help, and business setup guidance with transparent pricing and fast turnaround.",
-    url: "https://pro-desk-uae.example.com/services",
+    url: "https://adarshdessai4-spec.github.io/pro_uae_website/services",
     type: "website",
   },
 };
@@ -27,7 +27,7 @@ const ServicesPage = () => {
               <SectionTitle
                 eyebrow="Services"
                 title="UAE PRO & Visa services built for speed"
-                subtitle="From corporate PRO support to visa processing and business setup, we manage the paperwork so you can focus on growth."
+                subtitle="Providing 2-year freelance visa at investment pricing plus full PRO, visa, and business setup support."
               />
               <div className="flex flex-wrap gap-3 text-sm text-slate-600">
                 <span className="flex items-center gap-2 rounded-full bg-white px-3 py-2 shadow-sm ring-1 ring-slate-200">

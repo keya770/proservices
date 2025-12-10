@@ -14,10 +14,9 @@ const Footer = () => {
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid gap-8 md:grid-cols-3 md:gap-10">
           <div>
-            <div className="text-lg font-semibold text-[var(--color-navy)]">KEYA PRO DESK UAE</div>
+            <div className="text-lg font-semibold text-[var(--color-navy)]">AL HASEL Consultancy Services LLC</div>
             <p className="balanced mt-3 max-w-md text-sm leading-relaxed text-slate-600">
-              Smart PRO, visa, and business setup support for founders, freelancers, and enterprises
-              across the UAE. We manage the paperwork; you focus on growth.
+              Providing 2-year freelance visa at an investment price with fast, reliable PRO and business services support across Dubai.
             </p>
           </div>
 
@@ -35,15 +34,17 @@ const Footer = () => {
           <div>
             <div className="text-sm font-semibold text-slate-900">Contact</div>
             <div className="mt-3 flex flex-col gap-2 text-sm text-slate-600">
-              <span>Phone / WhatsApp: +971 50 123 4567</span>
-              <span>Email: info@example.ae</span>
-              <span>Office: Business Bay, Dubai, UAE</span>
+              <span>Phone / WhatsApp: +971 54 542 0537</span>
+              <span>Email: haselconsultancy@gmail.com</span>
+              <span>P.O Box: 32935</span>
+              <span>Office 313, Emgate Building,</span>
+              <span>Near Business Bay Metro Station (Sea Side), Dubai, UAE</span>
             </div>
           </div>
         </div>
 
         <div className="mt-10 border-t border-slate-200 pt-6 text-sm text-slate-500">
-          © {year} KEYA PRO DESK UAE. All rights reserved.
+          © {year} AL HASEL Consultancy Services LLC. All rights reserved.
         </div>
       </div>
     </footer>

@@ -3,14 +3,14 @@ import ContactForm from "@/components/contact-form";
 import SectionTitle from "@/components/section-title";
 
 export const metadata: Metadata = {
-  title: "Contact KEYA PRO DESK UAE | Book a Consultation",
+  title: "Contact HCT Services | AL HASEL Consultancy | Book a Consultation",
   description:
-    "Contact KEYA PRO DESK UAE for PRO services, visa processing, fine waiver help, and business setup in Dubai. Fast response within 24 hours.",
+    "Reach AL HASEL Consultancy (HCT Services) for PRO support, 2-year freelance visas, employment visas, and business setup in Dubai. Fast response within 24 hours.",
   openGraph: {
-    title: "Contact KEYA PRO DESK UAE | Book a Consultation",
+    title: "Contact HCT Services | AL HASEL Consultancy | Book a Consultation",
     description:
-      "Reach KEYA PRO DESK UAE for UAE PRO services, visa support, and business setup guidance. We respond within one business day.",
-    url: "https://pro-desk-uae.example.com/contact",
+      "Call +971 54 542 0537 or email haselconsultancy@gmail.com for PRO, visa, and business setup guidance in Dubai. We respond within one business day.",
+    url: "https://adarshdessai4-spec.github.io/pro_uae_website/contact",
     type: "website",
   },
 };
@@ -38,19 +38,21 @@ const ContactPage = () => {
             <div className="mt-6 space-y-3 text-sm text-slate-700">
               <div>
                 <div className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-gold)]">Phone</div>
-                <div className="text-[var(--color-navy)]">+971 50 123 4567</div>
+                <div className="text-[var(--color-navy)]">+971 54 542 0537</div>
               </div>
               <div>
                 <div className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-gold)]">WhatsApp</div>
-                <div className="text-[var(--color-navy)]">+971 50 123 4567</div>
+                <div className="text-[var(--color-navy)]">+971 54 542 0537</div>
               </div>
               <div>
                 <div className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-gold)]">Email</div>
-                <div className="text-[var(--color-navy)]">info@example.ae</div>
+                <div className="text-[var(--color-navy)]">haselconsultancy@gmail.com</div>
               </div>
               <div>
                 <div className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-gold)]">Office</div>
-                <div className="text-[var(--color-navy)]">Business Bay, Dubai, UAE</div>
+                <div className="text-[var(--color-navy)]">
+                  P.O Box: 32935, Office 313, Emgate Building, Near Business Bay Metro Station (Sea Side), Dubai, UAE
+                </div>
               </div>
             </div>
           </div>

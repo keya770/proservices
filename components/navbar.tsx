@@ -27,11 +27,9 @@ const Navbar = () => {
         <div className="flex items-center justify-between gap-4 py-3 sm:py-4">
           <Link href="/" className="flex items-center gap-2">
             <div className="rounded-xl bg-[var(--color-gold)] px-2 py-1 text-xs font-semibold text-[var(--color-navy)]">
-              KEYA
+              HCT
             </div>
-            <div className="text-lg font-semibold text-slate-900">
-              KEYA PRO DESK UAE
-            </div>
+            <div className="text-lg font-semibold text-slate-900">AL HASEL Consultancy</div>
           </Link>
 
           <nav className="hidden items-center gap-6 md:flex">

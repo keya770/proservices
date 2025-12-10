@@ -70,24 +70,24 @@ export const testimonialItems: Testimonial[] = [
 
 export const featureHighlights: FeatureHighlight[] = [
   {
-    title: "End-to-End Handling",
+    title: "Fast & Reliable",
     description:
-      "From document prep to approvals, we manage every government touchpoint with proactive updates.",
+      "Swift submissions and clear timelines so you get your approvals without delays.",
   },
   {
-    title: "Transparent Pricing",
+    title: "Professional Handling",
     description:
-      "Clear quotes with government fees separated. No hidden charges or last-minute surprises.",
+      "Concierge-style support for all PRO and visa services—labor, immigration, attestations, and renewals.",
   },
   {
-    title: "Fast Processing & Updates",
+    title: "Affordable Solutions",
     description:
-      "We prioritize quick submissions, track every step, and keep you informed in real time.",
+      "Investment pricing for 2-year freelance visas and competitive rates for all services.",
   },
   {
-    title: "Dedicated Account Manager",
+    title: "Trusted Partner",
     description:
-      "One point of contact who understands your case and keeps the process moving.",
+      "Your go-to team for document clearing, fine waiver applications, and business setup (Mainland & Freezone).",
   },
 ];
 

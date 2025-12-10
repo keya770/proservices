@@ -10,18 +10,18 @@ const poppins = Poppins({
   variable: "--font-poppins",
 });
 
-const siteTitle = "KEYA PRO DESK UAE | Smart PRO, Visa & Business Setup Services";
+const siteTitle = "HCT Services | AL HASEL Consultancy Services LLC";
 const siteDescription =
-  "Premium UAE PRO services, visa processing, fine waiver assistance, and business setup solutions in Dubai with fast turnaround and dedicated support.";
+  "Providing 2-year freelance visa at an investment price with fast, reliable PRO and business services support across Dubai.";
 
 export const metadata: Metadata = {
   title: siteTitle,
   description: siteDescription,
-  metadataBase: new URL("https://pro-desk-uae.example.com"),
+  metadataBase: new URL("https://adarshdessai4-spec.github.io/pro_uae_website"),
   openGraph: {
     title: siteTitle,
     description: siteDescription,
-    url: "https://pro-desk-uae.example.com",
+    url: "https://adarshdessai4-spec.github.io/pro_uae_website",
     type: "website",
   },
 };

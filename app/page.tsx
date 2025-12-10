@@ -17,14 +17,14 @@ import {
 } from "@heroicons/react/24/outline";
 
 export const metadata: Metadata = {
-  title: "Smart PRO, Visa & Business Setup Services in the UAE | KEYA PRO DESK UAE",
+  title: "HCT Services | AL HASEL Consultancy | PRO & Visa Support in Dubai",
   description:
-    "Premium UAE PRO services, fine waiver applications, freelance and employment visas, and business setup in Dubai. Fast processing, transparent pricing, and dedicated support.",
+    "Providing 2-year freelance visa at an investment price with fast, reliable PRO services, employment visa processing, fine waiver help, and business setup across Dubai.",
   openGraph: {
-    title: "Smart PRO, Visa & Business Setup Services in the UAE | KEYA PRO DESK UAE",
+    title: "HCT Services | AL HASEL Consultancy | PRO & Visa Support in Dubai",
     description:
-      "End-to-end UAE PRO and visa services with business setup support. Transparent pricing and dedicated account managers.",
-    url: "https://pro-desk-uae.example.com/",
+      "End-to-end UAE PRO and visa services, 2-year freelance visa support, fine waiver help, and business setup guidance in Dubai.",
+    url: "https://adarshdessai4-spec.github.io/pro_uae_website",
     type: "website",
   },
 };
@@ -36,14 +36,14 @@ export default function Home() {
   return (
     <>
       <Hero
-        title="Smart PRO, Visa & Business Setup Services in the UAE"
-        subtitle="We handle every government touchpoint—visas, fines, attestations, and company setup—so you can launch and scale with confidence in Dubai and across the UAE."
+        title="AL HASEL Consultancy Services LLC"
+        subtitle="Providing 2-year freelance visa at an investment price with smooth, hassle-free PRO and business services support."
         primaryCta={{ label: "Get Free Consultation", href: "/contact" }}
         secondaryCta={{ label: "View Services", href: "/services" }}
         highlights={[
-          "Govt. process guidance",
-          "Fast turnaround",
-          "WhatsApp & Email support",
+          "Fast • Reliable • Professional • Affordable",
+          "All PRO & visa services",
+          "Business setup (Mainland & Freezone)",
         ]}
       />
 
@@ -71,8 +71,8 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <SectionTitle
             eyebrow="Why choose us"
-            title="Compliance made simple"
-            subtitle="Concierge-style support with transparent steps, responsive updates, and dedicated specialists."
+            title="Fast, reliable, professional, and affordable support"
+            subtitle="Your trusted partner for document clearing, PRO services, and business setup needs across Dubai."
             align="center"
           />
           <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -235,7 +235,7 @@ export default function Home() {
               Ready to start your UAE journey?
             </h3>
             <p className="balanced text-slate-200">
-              Tell us about your plans. We respond within one business day with next steps.
+              Tell us about your plans. We respond within one business day with next steps. Call/WhatsApp +971 54 542 0537 or email haselconsultancy@gmail.com.
             </p>
           </div>
           <Link
