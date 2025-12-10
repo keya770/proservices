@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { usePathname } from "next/navigation";
@@ -26,9 +27,14 @@ const Navbar = () => {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between gap-4 py-3 sm:py-4">
           <Link href="/" className="flex items-center gap-2">
-            <div className="rounded-xl bg-[var(--color-gold)] px-2 py-1 text-xs font-semibold text-[var(--color-navy)]">
-              HCT
-            </div>
+            <Image
+              src="/logo.png"
+              alt="HCT Services logo for UAE PRO and visa services"
+              width={40}
+              height={40}
+              priority
+              className="h-10 w-10 rounded-lg object-contain"
+            />
             <div className="text-lg font-semibold text-slate-900">AL HASEL Consultancy</div>
           </Link>
 
