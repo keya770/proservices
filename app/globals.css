@@ -80,6 +80,25 @@ video {
   backdrop-filter: blur(14px);
 }
 
+.cta-dark {
+  color: #fff !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+  background: linear-gradient(135deg, #111831 0%, #0c1227 50%, #1b2a55 100%);
+  background-size: 200% 200%;
+  box-shadow:
+    0 14px 35px -18px rgba(12, 18, 52, 0.6),
+    0 1px 0 rgba(255, 255, 255, 0.18) inset;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-position 2s ease;
+}
+
+.cta-dark:hover {
+  background-position: 100% 0;
+  transform: translateY(-4px);
+  box-shadow:
+    0 18px 40px -16px rgba(12, 18, 52, 0.65),
+    0 1px 0 rgba(255, 255, 255, 0.25) inset;
+}
+
 .grain {
   position: relative;
 }
@@ -103,4 +122,24 @@ video {
   100% {
     transform: translateY(0px);
   }
+}
+
+@keyframes sheenSlide {
+  0% {
+    transform: translateX(-80%);
+  }
+  100% {
+    transform: translateX(120%);
+  }
+}
+
+.header-sheen::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.28), transparent);
+  opacity: 0.55;
+  transform: translateX(-80%);
+  animation: sheenSlide 12s linear infinite;
+  pointer-events: none;
 }

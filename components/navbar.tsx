@@ -23,7 +23,7 @@ const Navbar = () => {
       : pathname.startsWith(href) || pathname.startsWith(`${href}/`);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/40 bg-white/70 backdrop-blur-2xl shadow-[0_18px_55px_-30px_rgba(12,18,52,0.65)]">
+    <header className="header-sheen relative overflow-hidden sticky top-0 z-50 border-b border-white/40 bg-white/70 backdrop-blur-2xl shadow-[0_18px_55px_-30px_rgba(12,18,52,0.65)]">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between gap-4 py-3 sm:py-4">
           <Link

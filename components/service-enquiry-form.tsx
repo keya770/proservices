@@ -143,7 +143,7 @@ const ServiceEnquiryForm = ({ serviceName }: Props) => {
 
       <button
         type="submit"
-        className="w-full rounded-full bg-[var(--color-navy)] px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-[var(--color-navy)]/20 transition hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-70"
+        className="cta-dark w-full rounded-full px-5 py-3 text-sm font-semibold disabled:cursor-not-allowed disabled:opacity-70"
         disabled={status === "loading"}
       >
         {status === "loading" ? "Submitting..." : "Request this service"}

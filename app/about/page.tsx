@@ -73,9 +73,10 @@ const AboutPage = () => {
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center rounded-full bg-[var(--color-navy)] px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-[var(--color-navy)]/20 transition hover:-translate-y-0.5"
+              className="cta-dark inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold"
             >
-              Speak with our team
+              <span>Speak with our team</span>
+              <span className="text-base leading-none">↗</span>
             </Link>
           </div>
           <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-xl shadow-slate-100 sm:p-7">
@@ -153,9 +154,10 @@ const AboutPage = () => {
           </div>
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center rounded-full bg-[var(--color-navy)] px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-[var(--color-navy)]/20 transition hover:-translate-y-0.5"
+            className="cta-dark inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold"
           >
-            Contact us
+            <span>Contact us</span>
+            <span className="text-base leading-none">↗</span>
           </Link>
         </div>
       </section>
