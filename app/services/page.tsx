@@ -74,9 +74,10 @@ const ServicesPage = () => {
               </p>
               <Link
                 href="/contact"
-                className="mt-4 inline-flex items-center justify-center rounded-full bg-[var(--color-navy)] px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-[var(--color-navy)]/20 transition hover:-translate-y-0.5"
+                className="mt-4 inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[var(--color-navy)] to-[#0f1933] px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-[var(--color-navy)]/25 transition hover:-translate-y-0.5"
               >
-                Book a consultation
+                <span className="drop-shadow-sm">Book a consultation</span>
+                <span className="text-base leading-none drop-shadow-sm">↗</span>
               </Link>
             </div>
           </div>
