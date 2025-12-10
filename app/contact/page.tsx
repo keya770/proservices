@@ -1,23 +1,35 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import ContactForm from "@/components/contact-form";
 import SectionTitle from "@/components/section-title";
 
 export const metadata: Metadata = {
-  title: "Contact HCT Services | AL HASEL Consultancy | Book a Consultation",
+  title: "Contact HCT Services | UAE PRO, Visa & Dubai Business Setup Consultation",
   description:
-    "Reach AL HASEL Consultancy (HCT Services) for PRO support, 2-year freelance visas, employment visas, and business setup in Dubai. Fast response within 24 hours.",
+    "Call +971 54 542 0537 or email haselconsultancy@gmail.com for UAE PRO services, freelance visa UAE, employment visa Dubai, fine waiver help, and business setup support.",
+  alternates: { canonical: "https://example.ae/contact" },
   openGraph: {
-    title: "Contact HCT Services | AL HASEL Consultancy | Book a Consultation",
+    title: "Contact HCT Services | UAE PRO, Visa & Dubai Business Setup Consultation",
     description:
-      "Call +971 54 542 0537 or email haselconsultancy@gmail.com for PRO, visa, and business setup guidance in Dubai. We respond within one business day.",
-    url: "https://adarshdessai4-spec.github.io/pro_uae_website/contact",
+      "Reach AL HASEL Consultancy (HCT Services) for UAE PRO services, Dubai business setup, freelance visa UAE, and employment visa Dubai guidance.",
+    url: "https://example.ae/contact",
     type: "website",
+    siteName: "HCT Services | AL HASEL Consultancy Services LLC",
+    images: [{ url: "https://example.ae/og-image.jpg", width: 1200, height: 630, alt: "Contact HCT Services Dubai" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact HCT Services | UAE PRO, Visa & Dubai Business Setup Consultation",
+    description:
+      "Talk to HCT Services for UAE PRO services, freelance visa UAE, employment visa Dubai, fine waiver help, and business setup support.",
+    images: ["https://example.ae/og-image.jpg"],
   },
 };
 
 const ContactPage = () => {
   return (
     <div className="bg-white">
+      <h1 className="sr-only">Contact HCT Services for UAE PRO services, visas, and Dubai business setup</h1>
       <section className="border-b border-slate-100 bg-gradient-to-br from-[var(--color-light)] via-white to-[#eef2ff] py-12 sm:py-14">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <SectionTitle
@@ -33,7 +45,7 @@ const ContactPage = () => {
           <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-lg shadow-slate-100 sm:p-8">
             <div className="text-sm font-semibold text-[var(--color-navy)]">Contact details</div>
             <p className="balanced mt-2 text-sm text-slate-600">
-              Reach us via WhatsApp, phone, or email. We will align on timelines, costs, and required documents before any submission.
+              Reach us via WhatsApp, phone, or email. We will align on timelines, costs, and required documents before any submission. Need a quick overview? See our <Link href="/services" className="text-[var(--color-navy)] underline-offset-4 hover:underline">UAE PRO & visa services</Link> or jump straight to the <Link href="/services/2-years-freelance-visa" className="text-[var(--color-navy)] underline-offset-4 hover:underline">2-year freelance visa UAE</Link> offer.
             </p>
             <div className="mt-6 space-y-3 text-sm text-slate-700">
               <div>
@@ -54,6 +66,9 @@ const ContactPage = () => {
                   P.O Box: 32935, Office 313, Emgate Building, Near Business Bay Metro Station (Sea Side), Dubai, UAE
                 </div>
               </div>
+            </div>
+            <div className="mt-6 rounded-2xl border border-dashed border-slate-200 bg-slate-50 p-4 text-xs text-slate-500">
+              Map placeholder — embed Google Maps here for local SEO when ready.
             </div>
           </div>
 

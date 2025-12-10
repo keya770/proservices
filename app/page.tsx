@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Script from "next/script";
 import type { Metadata } from "next";
 import Hero from "@/components/hero";
 import ServiceCard from "@/components/service-card";
@@ -17,15 +18,32 @@ import {
 } from "@heroicons/react/24/outline";
 
 export const metadata: Metadata = {
-  title: "HCT Services | AL HASEL Consultancy | PRO & Visa Support in Dubai",
+  title: "UAE PRO Services, Visa & Business Setup | Dubai Mainland & Freezone Experts",
   description:
-    "Providing 2-year freelance visa at an investment price with fast, reliable PRO services, employment visa processing, fine waiver help, and business setup across Dubai.",
+    "UAE PRO services, freelance visa UAE, employment visa Dubai, fine waiver help, and Dubai business setup by AL HASEL Consultancy (HCT Services).",
+  alternates: { canonical: "https://example.ae" },
   openGraph: {
-    title: "HCT Services | AL HASEL Consultancy | PRO & Visa Support in Dubai",
+    title: "UAE PRO Services, Visa & Business Setup | Dubai Mainland & Freezone Experts",
     description:
-      "End-to-end UAE PRO and visa services, 2-year freelance visa support, fine waiver help, and business setup guidance in Dubai.",
-    url: "https://adarshdessai4-spec.github.io/pro_uae_website",
+      "End-to-end UAE PRO services, Dubai business setup, 2-year freelance visa UAE support, and employment visa processing across the UAE.",
+    url: "https://example.ae",
     type: "website",
+    siteName: "HCT Services | AL HASEL Consultancy Services LLC",
+    images: [
+      {
+        url: "https://example.ae/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "UAE PRO services and Dubai business setup by HCT Services",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "UAE PRO Services, Visa & Business Setup | Dubai Mainland & Freezone Experts",
+    description:
+      "Freelance visa UAE, employment visa Dubai, and Dubai business setup with fast PRO services by AL HASEL Consultancy (HCT Services).",
+    images: ["https://example.ae/og-image.jpg"],
   },
 };
 
@@ -33,25 +51,38 @@ const serviceIcons = [BriefcaseIcon, ShieldCheckIcon, ClockIcon, UserGroupIcon, 
 const featureIcons = [ShieldCheckIcon, SparklesIcon, ClockIcon, UserGroupIcon];
 
 export default function Home() {
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  };
+
   return (
     <>
       <Hero
-        title="AL HASEL Consultancy Services LLC"
-        subtitle="Providing 2-year freelance visa at an investment price with smooth, hassle-free PRO and business services support."
+        title="UAE PRO Services, Visa & Business Setup in Dubai"
+        subtitle="Providing 2-year freelance visa at an investment price with smooth, hassle-free PRO services, employment visa Dubai support, and Dubai business setup."
         primaryCta={{ label: "Get Free Consultation", href: "/contact" }}
-        secondaryCta={{ label: "View Services", href: "/services" }}
+        secondaryCta={{ label: "View all UAE PRO & Visa Services", href: "/services" }}
         highlights={[
-          "Fast • Reliable • Professional • Affordable",
-          "All PRO & visa services",
-          "Business setup (Mainland & Freezone)",
+          "Fast • Reliable • Professional • Affordable UAE PRO services",
+          "All PRO, freelance visa UAE, and employment visa Dubai support",
+          "Dubai business setup (Mainland & Freezone)",
         ]}
       />
 
       <section id="services" className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
         <SectionTitle
           eyebrow="Services"
-          title="Our Core Services"
-          subtitle="We help individuals and companies with all PRO, visa, and business setup requirements across the UAE."
+          title="Our Core UAE PRO & Visa Services"
+          subtitle="UAE PRO services, Dubai business setup, freelance visa UAE, employment visa Dubai, fine waiver assistance, and corporate documentation support."
         />
         <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => {
@@ -64,6 +95,11 @@ export default function Home() {
               />
             );
           })}
+        </div>
+        <div className="mt-8 text-sm font-semibold text-[var(--color-navy)]">
+          <Link href="/services" className="hover:underline">
+            View all UAE PRO & Visa Services
+          </Link>
         </div>
       </section>
 
@@ -101,11 +137,11 @@ export default function Home() {
         <div className="rounded-3xl bg-white p-6 shadow-xl shadow-slate-100 sm:p-8 lg:p-10">
           <div className="flex flex-col gap-10 lg:flex-row lg:items-center">
             <div className="lg:w-1/2">
-              <SectionTitle
-                eyebrow="Process"
-                title="How it works"
-                subtitle="Clear, guided steps from enquiry to approvals and residency."
-              />
+            <SectionTitle
+              eyebrow="Process"
+              title="How it works"
+              subtitle="Clear, guided steps from enquiry to approvals and residency for every UAE PRO service, visa, and business setup."
+            />
             </div>
             <div className="lg:w-1/2">
               <div className="flex flex-col gap-6 sm:grid sm:grid-cols-2 sm:gap-8 lg:grid-cols-1">
@@ -141,15 +177,13 @@ export default function Home() {
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-gold)]">
                 Business Setup
               </p>
-              <h3 className="balanced text-3xl font-semibold">Business Setup (Mainland & Freezone)</h3>
+              <h3 className="balanced text-3xl font-semibold">Dubai Mainland & Freezone Business Setup</h3>
               <p className="balanced text-base text-slate-200">
-                Choose the right jurisdiction, secure your trade license, and plan visas with a
-                clear roadmap. We simplify mainland company formation, freezone options, and bank
-                account introductions so you can launch fast.
+                Choose the right jurisdiction, secure your trade license, and plan visas with a clear roadmap. We simplify Dubai mainland company formation, UAE freezone setup, and bank account introductions so you can launch fast.
               </p>
               <ul className="space-y-2 text-sm text-slate-200">
-                <li>• Mainland company formation with licensing guidance</li>
-                <li>• Freezone setups with activity scoping and package advice</li>
+                <li>• Dubai mainland company formation with licensing guidance</li>
+                <li>• UAE freezone setups with activity scoping and package advice</li>
                 <li>• Trade license, establishment card, and bank account support</li>
               </ul>
               <Link
@@ -246,6 +280,12 @@ export default function Home() {
           </Link>
         </div>
       </section>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
     </>
   );
 }

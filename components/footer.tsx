@@ -18,6 +18,9 @@ const Footer = () => {
             <p className="balanced mt-3 max-w-md text-sm leading-relaxed text-slate-600">
               Providing 2-year freelance visa at an investment price with fast, reliable PRO and business services support across Dubai.
             </p>
+            <p className="balanced mt-2 text-xs text-slate-500">
+              Serving entrepreneurs, freelancers, and companies across Dubai and the United Arab Emirates.
+            </p>
           </div>
 
           <div>

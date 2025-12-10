@@ -4,15 +4,25 @@ import SectionTitle from "@/components/section-title";
 import { ShieldCheckIcon, BoltIcon, SparklesIcon } from "@heroicons/react/24/outline";
 
 export const metadata: Metadata = {
-  title: "About HCT Services | AL HASEL Consultancy | PRO, Visa & Business Setup Specialists",
+  title: "About HCT Services | UAE PRO, Visa & Dubai Business Setup Specialists",
   description:
-    "Learn about AL HASEL Consultancy (HCT Services) – our mission, values, and team dedicated to fast, reliable PRO services, visa processing, and business setup in Dubai.",
+    "Meet AL HASEL Consultancy (HCT Services) — experts in UAE PRO services, Dubai business setup, freelance visa UAE, and employment visa Dubai support.",
+  alternates: { canonical: "https://example.ae/about" },
   openGraph: {
-    title: "About HCT Services | AL HASEL Consultancy | PRO, Visa & Business Setup Specialists",
+    title: "About HCT Services | UAE PRO, Visa & Dubai Business Setup Specialists",
     description:
-      "We combine compliance expertise with concierge-style support for PRO, visa, and company formation services across the UAE.",
-    url: "https://adarshdessai4-spec.github.io/pro_uae_website/about",
+      "HCT Services delivers fast, reliable UAE PRO services, freelance visas, employment visas, and Dubai business setup with concierge-style support.",
+    url: "https://example.ae/about",
     type: "profile",
+    siteName: "HCT Services | AL HASEL Consultancy Services LLC",
+    images: [{ url: "https://example.ae/og-image.jpg", width: 1200, height: 630, alt: "About HCT Services team in Dubai" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About HCT Services | UAE PRO, Visa & Dubai Business Setup Specialists",
+    description:
+      "Dubai-based PRO services, freelance visa UAE, employment visa Dubai, and business setup experts at AL HASEL Consultancy (HCT Services).",
+    images: ["https://example.ae/og-image.jpg"],
   },
 };
 
@@ -37,6 +47,7 @@ const values = [
 const AboutPage = () => {
   return (
     <div className="bg-white">
+      <h1 className="sr-only">About HCT Services – UAE PRO, visa, and Dubai business setup specialists</h1>
       <section className="border-b border-slate-100 bg-gradient-to-br from-[var(--color-light)] via-white to-[#eef2ff] py-12 sm:py-14">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <SectionTitle
@@ -45,7 +56,7 @@ const AboutPage = () => {
             subtitle="We are a team of PRO and business setup specialists obsessed with making UAE compliance effortless."
           />
           <p className="balanced mt-6 max-w-3xl text-sm text-slate-700 sm:text-base">
-            We built AL HASEL Consultancy Services LLC (HCT Services) to bridge the gap between fast-growing businesses and complex government processes. Our consultants have guided hundreds of founders, HR teams, and freelancers through visas, fine waivers, and company formation with clarity and confidence.
+            We built AL HASEL Consultancy Services LLC (HCT Services) to bridge the gap between fast-growing businesses and complex government processes. Our consultants have guided hundreds of founders, HR teams, and freelancers through visas, fine waivers, and company formation with clarity and confidence. Explore our <Link href="/services" className="text-[var(--color-navy)] underline-offset-4 hover:underline">UAE PRO services</Link> or <Link href="/contact" className="text-[var(--color-navy)] underline-offset-4 hover:underline">book a consultation</Link> to get started.
           </p>
         </div>
       </section>

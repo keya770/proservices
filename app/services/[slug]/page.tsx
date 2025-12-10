@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import Script from "next/script";
 import { notFound } from "next/navigation";
 import SectionTitle from "@/components/section-title";
 import ServiceEnquiryForm from "@/components/service-enquiry-form";
@@ -17,17 +19,35 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
     };
   }
 
-    return {
+  return {
+    title: service.metaTitle,
+    description: service.metaDescription,
+    alternates: {
+      canonical: `https://example.ae/services/${service.slug}`,
+    },
+    openGraph: {
       title: service.metaTitle,
       description: service.metaDescription,
-      openGraph: {
-        title: service.metaTitle,
-        description: service.metaDescription,
-        url: `https://adarshdessai4-spec.github.io/pro_uae_website/services/${service.slug}`,
-        type: "article",
-      },
-    };
-  }
+      url: `https://example.ae/services/${service.slug}`,
+      type: "article",
+      siteName: "HCT Services | AL HASEL Consultancy Services LLC",
+      images: [
+        {
+          url: "https://example.ae/og-image.jpg",
+          width: 1200,
+          height: 630,
+          alt: `${service.name} UAE PRO services`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: service.metaTitle,
+      description: service.metaDescription,
+      images: ["https://example.ae/og-image.jpg"],
+    },
+  };
+}
 
 const ServicePage = ({ params }: { params: { slug: string } }) => {
   const service = getServiceBySlug(params.slug);
@@ -37,9 +57,58 @@ const ServicePage = ({ params }: { params: { slug: string } }) => {
   }
 
   const currentService = service;
+  const relatedServices = services.filter((item) => item.slug !== currentService.slug).slice(0, 3);
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://example.ae" },
+      { "@type": "ListItem", position: 2, name: "Services", item: "https://example.ae/services" },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: currentService.name,
+        item: `https://example.ae/services/${currentService.slug}`,
+      },
+    ],
+  };
+  const serviceLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: currentService.name,
+    serviceType: currentService.shortDescription,
+    areaServed: "United Arab Emirates",
+    provider: {
+      "@type": "LocalBusiness",
+      name: "HCT Services | AL HASEL Consultancy Services LLC",
+      telephone: "+971545420537",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Dubai",
+        addressCountry: "AE",
+      },
+    },
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "AED",
+      availability: "https://schema.org/InStock",
+    },
+  };
 
   return (
     <div className="bg-white">
+      <div className="mx-auto flex max-w-6xl items-center gap-2 px-4 pt-6 text-xs text-slate-600 sm:px-6 lg:px-8">
+        <Link href="/" className="hover:text-[var(--color-navy)]">
+          Home
+        </Link>
+        <span aria-hidden="true">/</span>
+        <Link href="/services" className="hover:text-[var(--color-navy)]">
+          Services
+        </Link>
+        <span aria-hidden="true">/</span>
+        <span className="font-semibold text-[var(--color-navy)]">{currentService.name}</span>
+      </div>
       <section className="relative overflow-hidden bg-[var(--color-navy)] py-12 text-white sm:py-14">
         <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-navy)] via-[#0f1b34] to-[#0b1120] opacity-90" />
         <div className="absolute right-10 top-6 h-40 w-40 rounded-full bg-[var(--color-gold)]/15 blur-3xl" />
@@ -157,7 +226,37 @@ const ServicePage = ({ params }: { params: { slug: string } }) => {
             </div>
           </div>
         </div>
+
+        <div className="mx-auto max-w-6xl px-4 pb-14 pt-4 sm:px-6 lg:px-8">
+          <h2 className="text-xl font-semibold text-[var(--color-navy)]">Related UAE PRO & visa services</h2>
+          <p className="mt-2 text-sm text-slate-600">
+            Explore more UAE PRO services, Dubai business setup, and visa solutions tailored to your needs.
+          </p>
+          <div className="mt-6 grid gap-4 md:grid-cols-3">
+            {relatedServices.map((item) => (
+              <Link
+                key={item.slug}
+                href={`/services/${item.slug}`}
+                className="rounded-2xl border border-slate-200 bg-white p-4 text-sm font-semibold text-[var(--color-navy)] shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+              >
+                {item.name}
+              </Link>
+            ))}
+          </div>
+        </div>
       </section>
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
+      <Script
+        id="service-schema"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceLd) }}
+      />
     </div>
   );
 };
