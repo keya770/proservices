@@ -23,19 +23,29 @@ const Navbar = () => {
       : pathname.startsWith(href) || pathname.startsWith(`${href}/`);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-100 bg-white/90 backdrop-blur shadow-lg shadow-black/5">
+    <header className="sticky top-0 z-50 border-b border-white/50 bg-white/80 backdrop-blur-xl shadow-[0_20px_60px_-35px_rgba(12,18,52,0.65)]">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between gap-4 py-3 sm:py-4">
-          <Link href="/" className="flex items-center gap-2">
-            <Image
-              src="/pro_logo.png"
-              alt="HCT Services logo for UAE PRO and visa services"
-              width={40}
-              height={40}
-              priority
-              className="h-10 w-10 rounded-lg object-contain"
-            />
-            <div className="text-lg font-semibold text-slate-900">AL HASEL Consultancy</div>
+          <Link href="/" className="group flex items-center gap-3 rounded-full px-2 py-1 transition hover:-translate-y-0.5">
+            <div className="relative">
+              <div className="absolute inset-0 rounded-full bg-[var(--color-gold)]/30 blur-md opacity-0 transition group-hover:opacity-100" />
+              <Image
+                src="/pro_logo.png"
+                alt="HCT Services logo for UAE PRO and visa services"
+                width={44}
+                height={44}
+                priority
+                className="relative h-11 w-11 rounded-2xl border border-white/70 object-contain shadow"
+              />
+            </div>
+            <div>
+              <div className="text-sm font-semibold uppercase tracking-[0.08em] text-slate-500">
+                HCT Services
+              </div>
+              <div className="text-lg font-semibold text-slate-900 leading-tight">
+                AL HASEL Consultancy
+              </div>
+            </div>
           </Link>
 
           <nav className="hidden items-center gap-6 md:flex">
@@ -43,10 +53,10 @@ const Navbar = () => {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-sm font-medium transition-colors ${
+                className={`relative text-sm font-semibold transition before:absolute before:bottom-[-10px] before:left-0 before:h-[2px] before:w-full before:scale-x-0 before:bg-[var(--color-navy)] before:transition before:origin-left ${
                   isActive(link.href)
-                    ? "text-[var(--color-navy)]"
-                    : "text-slate-600 hover:text-[var(--color-navy)]"
+                    ? "text-[var(--color-navy)] before:scale-x-100"
+                    : "text-slate-600 hover:text-[var(--color-navy)] hover:before:scale-x-100"
                 }`}
               >
                 {link.label}
@@ -57,9 +67,10 @@ const Navbar = () => {
           <div className="hidden md:block">
             <Link
               href="/contact"
-              className="rounded-full bg-[var(--color-navy)] px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-[var(--color-navy)]/20 transition hover:-translate-y-0.5 hover:bg-[#111a32] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-gold)]"
+              className="group relative inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[var(--color-navy)] to-[#0f1933] px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-[var(--color-navy)]/20 transition hover:-translate-y-0.5"
             >
-              Book Consultation
+              <span className="absolute inset-0 rounded-full bg-white/10 opacity-0 transition group-hover:opacity-100" />
+              <span className="relative">Book Consultation</span>
             </Link>
           </div>
 

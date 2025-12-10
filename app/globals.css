@@ -5,6 +5,8 @@
   --color-gold: #fbbf24;
   --color-light: #f9fafb;
   --color-slate: #0f172a;
+  --color-ink: #050a16;
+  --color-sky: #c3d9ff;
 }
 
 @theme inline {
@@ -16,7 +18,9 @@ html {
 }
 
 body {
-  background: var(--color-light);
+  background: radial-gradient(circle at 20% 20%, rgba(251, 191, 36, 0.12), transparent 28%),
+    radial-gradient(circle at 80% 0%, rgba(59, 130, 246, 0.14), transparent 25%),
+    linear-gradient(135deg, #f7f9fc, #e8edf7);
   color: #0f172a;
   font-family: var(--font-poppins), "Inter", system-ui, -apple-system, sans-serif;
   overflow-x: hidden;
@@ -50,4 +54,53 @@ img,
 video {
   max-width: 100%;
   height: auto;
+}
+
+.glow-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.glow-card::before {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background: conic-gradient(from 90deg, rgba(251, 191, 36, 0.14), rgba(59, 130, 246, 0.12), rgba(11, 17, 32, 0.08), rgba(251, 191, 36, 0.14));
+  filter: blur(40px);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.glow-card:hover::before {
+  opacity: 1;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(14px);
+}
+
+.grain {
+  position: relative;
+}
+
+.grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  mix-blend-mode: soft-light;
+}
+
+@keyframes floaty {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }

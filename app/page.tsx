@@ -79,31 +79,37 @@ export default function Home() {
       />
 
       <section id="services" className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
-        <SectionTitle
-          eyebrow="Services"
-          title="Our Core UAE PRO & Visa Services"
-          subtitle="UAE PRO services, Dubai business setup, freelance visa UAE, employment visa Dubai, fine waiver assistance, and corporate documentation support."
-        />
-        <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {services.map((service, index) => {
-            const Icon = serviceIcons[index % serviceIcons.length];
-            return (
-              <ServiceCard
-                key={service.slug}
-                service={service}
-                icon={<Icon className="h-6 w-6" />}
-              />
-            );
-          })}
-        </div>
-        <div className="mt-8 text-sm font-semibold text-[var(--color-navy)]">
-          <Link href="/services" className="hover:underline">
-            View all UAE PRO & Visa Services
-          </Link>
+        <div className="relative overflow-hidden rounded-3xl border border-white/80 bg-white/90 p-8 shadow-2xl shadow-slate-200/60 sm:p-10">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.08),transparent_35%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(251,191,36,0.12),transparent_30%)]" />
+          <div className="relative">
+            <SectionTitle
+              eyebrow="Services"
+              title="Our Core UAE PRO & Visa Services"
+              subtitle="UAE PRO services, Dubai business setup, freelance visa UAE, employment visa Dubai, fine waiver assistance, and corporate documentation support."
+            />
+            <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {services.map((service, index) => {
+                const Icon = serviceIcons[index % serviceIcons.length];
+                return (
+                  <ServiceCard
+                    key={service.slug}
+                    service={service}
+                    icon={<Icon className="h-6 w-6" />}
+                  />
+                );
+              })}
+            </div>
+            <div className="mt-8 text-sm font-semibold text-[var(--color-navy)]">
+              <Link href="/services" className="inline-flex items-center gap-2 hover:underline">
+                View all UAE PRO & Visa Services <span className="text-base">↗</span>
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section className="bg-white py-12 sm:py-16">
+      <section className="bg-gradient-to-b from-white to-[#eef2fb] py-12 sm:py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <SectionTitle
             eyebrow="Why choose us"
@@ -117,9 +123,9 @@ export default function Home() {
               return (
                 <div
                   key={feature.title}
-                  className="flex h-full flex-col gap-3 rounded-2xl border border-slate-200 bg-white p-5 text-left shadow-lg shadow-slate-100"
+                  className="glow-card relative flex h-full flex-col gap-3 overflow-hidden rounded-2xl border border-slate-100 bg-white/90 p-5 text-left shadow-xl shadow-slate-200/70 transition hover:-translate-y-1"
                 >
-                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[var(--color-gold)]/20 text-[var(--color-navy)]">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-[var(--color-gold)]/40 via-[#ffe9ad] to-white text-[var(--color-navy)] shadow-inner">
                     <Icon className="h-6 w-6" />
                   </div>
                   <h3 className="text-base font-semibold text-[var(--color-navy)]">
@@ -134,66 +140,80 @@ export default function Home() {
       </section>
 
       <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
-        <div className="rounded-3xl bg-white p-6 shadow-xl shadow-slate-100 sm:p-8 lg:p-10">
-          <div className="flex flex-col gap-10 lg:flex-row lg:items-center">
-            <div className="lg:w-1/2">
-            <SectionTitle
-              eyebrow="Process"
-              title="How it works"
-              subtitle="Clear, guided steps from enquiry to approvals and residency for every UAE PRO service, visa, and business setup."
-            />
-            </div>
-            <div className="lg:w-1/2">
-              <div className="flex flex-col gap-6 sm:grid sm:grid-cols-2 sm:gap-8 lg:grid-cols-1">
-                <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
-                  <div className="flex-1 space-y-4">
-                    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
-                      {processSteps.map((step, index) => (
-                        <div key={step.title} className="relative">
-                          <div className="flex items-center gap-3">
-                            <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[var(--color-navy)] text-sm font-semibold text-white">
-                              {index + 1}
-                            </div>
-                            <div className="text-sm font-semibold text-[var(--color-navy)]">
-                              {step.title}
-                            </div>
-                          </div>
-                          <p className="mt-2 text-sm text-slate-600">{step.description}</p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
+        <div className="relative overflow-hidden rounded-3xl border border-white/70 bg-white/90 p-6 shadow-2xl shadow-slate-200/60 sm:p-8 lg:p-10">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(251,191,36,0.12),transparent_30%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,rgba(59,130,246,0.1),transparent_35%)]" />
+          <div className="relative grid gap-10 lg:grid-cols-2 lg:items-center">
+            <div className="space-y-4">
+              <SectionTitle
+                eyebrow="Process"
+                title="How it works"
+                subtitle="Clear, guided steps from enquiry to approvals and residency for every UAE PRO service, visa, and business setup."
+              />
+              <div className="flex flex-wrap gap-2 text-xs font-semibold text-[var(--color-navy)] opacity-80">
+                <span className="rounded-full bg-[var(--color-gold)]/20 px-3 py-1">Compliance-first</span>
+                <span className="rounded-full bg-slate-900/5 px-3 py-1">Transparent milestones</span>
+                <span className="rounded-full bg-slate-900/5 px-3 py-1">Dedicated consultant</span>
               </div>
+            </div>
+            <div className="space-y-4">
+              {processSteps.map((step, index) => (
+                <div
+                  key={step.title}
+                  className="group relative flex gap-4 rounded-2xl border border-slate-100 bg-white/90 p-4 shadow-lg shadow-slate-200/70 transition hover:-translate-y-1 hover:shadow-2xl"
+                >
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-[var(--color-navy)] to-[#0f1933] text-sm font-semibold text-white shadow-inner shadow-[0_6px_16px_rgba(11,17,32,0.35)]">
+                    {index + 1}
+                  </div>
+                  <div>
+                    <div className="text-sm font-semibold text-[var(--color-navy)]">{step.title}</div>
+                    <p className="mt-1 text-sm text-slate-600">{step.description}</p>
+                  </div>
+                  <span className="absolute inset-y-3 right-3 h-[2px] w-12 rounded-full bg-gradient-to-r from-[var(--color-gold)]/80 to-[#4c6fff]/60 opacity-0 transition group-hover:opacity-100" />
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      <section className="bg-[var(--color-navy)] py-12 sm:py-16 text-white">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden bg-[var(--color-navy)] py-12 sm:py-16 text-white">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(251,191,36,0.12),transparent_35%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_90%_10%,rgba(59,130,246,0.18),transparent_30%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(255,255,255,0.08)_0%,rgba(255,255,255,0)_35%,rgba(255,255,255,0.08)_70%)] opacity-40" />
+        <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
-            <div className="space-y-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-gold)]">
+            <div className="space-y-5">
+              <p className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-[var(--color-gold)] ring-1 ring-white/10">
                 Business Setup
               </p>
-              <h3 className="balanced text-3xl font-semibold">Dubai Mainland & Freezone Business Setup</h3>
+              <h3 className="balanced text-3xl font-semibold leading-tight sm:text-4xl">
+                Dubai Mainland & Freezone Business Setup
+              </h3>
               <p className="balanced text-base text-slate-200">
                 Choose the right jurisdiction, secure your trade license, and plan visas with a clear roadmap. We simplify Dubai mainland company formation, UAE freezone setup, and bank account introductions so you can launch fast.
               </p>
-              <ul className="space-y-2 text-sm text-slate-200">
-                <li>• Dubai mainland company formation with licensing guidance</li>
-                <li>• UAE freezone setups with activity scoping and package advice</li>
-                <li>• Trade license, establishment card, and bank account support</li>
-              </ul>
+              <div className="grid gap-3 sm:grid-cols-2">
+                {[
+                  "Dubai mainland company formation with licensing guidance",
+                  "UAE freezone setups with activity scoping and package advice",
+                  "Trade license, establishment card, and bank account support",
+                  "Visa planning, timelines, and document preparation",
+                ].map((point) => (
+                  <div key={point} className="flex items-start gap-2 rounded-2xl border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100">
+                    <span className="mt-1 h-2 w-2 rounded-full bg-[var(--color-gold)]" />
+                    <span>{point}</span>
+                  </div>
+                ))}
+              </div>
               <Link
                 href="/services/business-setup-mainland-freezone"
-                className="inline-flex items-center justify-center rounded-full bg-[var(--color-gold)] px-5 py-3 text-sm font-semibold text-[var(--color-navy)] shadow-lg shadow-black/20 transition hover:-translate-y-0.5"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--color-gold)] px-5 py-3 text-sm font-semibold text-[var(--color-navy)] shadow-lg shadow-black/20 transition hover:-translate-y-0.5"
               >
-                Plan My Company Setup
+                Plan My Company Setup <span className="text-base">↗</span>
               </Link>
             </div>
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-6 shadow-lg shadow-black/10 backdrop-blur">
+            <div className="glow-card rounded-2xl border border-white/10 bg-white/5 p-6 shadow-2xl shadow-black/25 backdrop-blur">
               <div className="flex items-center gap-3">
                 <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[var(--color-gold)]/20 text-[var(--color-gold)]">
                   <ArrowTrendingUpIcon className="h-7 w-7" />
@@ -222,7 +242,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-white py-12 sm:py-16">
+      <section className="bg-gradient-to-b from-white to-[#f2f5ff] py-12 sm:py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <SectionTitle
             eyebrow="Proof"
@@ -239,19 +259,23 @@ export default function Home() {
       </section>
 
       <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
-        <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
-          <div>
-            <SectionTitle
-              eyebrow="FAQ"
-              title="Frequently Asked Questions"
-              subtitle="Quick answers on PRO services, visas, timelines, and fees."
-            />
-            <p className="mt-4 text-sm text-slate-600">
-              Need more clarity? We share exact timelines, document checklists, and costs for your
-              case before we start.
-            </p>
+        <div className="relative overflow-hidden rounded-3xl border border-white/70 bg-white/90 p-6 shadow-2xl shadow-slate-200/60 sm:p-8 lg:p-10">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_0%,rgba(59,130,246,0.12),transparent_30%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_100%,rgba(251,191,36,0.12),transparent_35%)]" />
+          <div className="relative grid gap-10 lg:grid-cols-2 lg:items-start">
+            <div>
+              <SectionTitle
+                eyebrow="FAQ"
+                title="Frequently Asked Questions"
+                subtitle="Quick answers on PRO services, visas, timelines, and fees."
+              />
+              <p className="mt-4 text-sm text-slate-600">
+                Need more clarity? We share exact timelines, document checklists, and costs for your
+                case before we start.
+              </p>
+            </div>
+            <FAQAccordion items={faqItems} />
           </div>
-          <FAQAccordion items={faqItems} />
         </div>
       </section>
 

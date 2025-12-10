@@ -10,7 +10,8 @@ const footerLinks = [
 const Footer = () => {
   const year = new Date().getFullYear();
   return (
-    <footer className="border-t border-slate-200 bg-white">
+    <footer className="relative border-t border-slate-200 bg-white/90 backdrop-blur">
+      <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-[var(--color-gold)] via-[#f7c14f] to-[#4c6fff]" />
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid gap-8 md:grid-cols-3 md:gap-10">
           <div>

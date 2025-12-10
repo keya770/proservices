@@ -18,7 +18,7 @@ const FAQAccordion = ({ items }: Props) => {
         return (
           <div
             key={item.question}
-            className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm transition hover:border-[var(--color-navy)]/20 hover:shadow-md"
+            className="rounded-2xl border border-slate-100 bg-white/90 p-4 shadow-sm transition hover:-translate-y-0.5 hover:border-[var(--color-navy)]/20 hover:shadow-lg"
           >
             <button
               className="flex w-full items-center justify-between gap-4 text-left"

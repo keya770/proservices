@@ -9,13 +9,16 @@ const SectionTitle = ({ eyebrow, title, subtitle, align = "left" }: Props) => {
   const alignment = align === "center" ? "items-center text-center" : "items-start text-left";
   const widthClass = align === "center" ? "mx-auto" : "";
   return (
-    <div className={`flex flex-col gap-2 ${alignment} max-w-3xl ${widthClass}`}>
+    <div className={`flex flex-col gap-3 ${alignment} max-w-3xl ${widthClass}`}>
       {eyebrow && (
-        <div className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-gold)]">
-          {eyebrow}
+        <div className="flex items-center gap-2 text-[var(--color-gold)]">
+          <span className="h-[2px] w-8 rounded-full bg-gradient-to-r from-[var(--color-gold)] to-[#f7c14f]" />
+          <span className="text-xs font-semibold uppercase tracking-[0.25em] text-[var(--color-navy)] opacity-70">
+            {eyebrow}
+          </span>
         </div>
       )}
-      <h2 className="balanced text-2xl font-semibold leading-snug text-[var(--color-navy)] sm:text-3xl">
+      <h2 className="balanced text-2xl font-semibold leading-snug text-[var(--color-navy)] sm:text-3xl lg:text-4xl">
         {title}
       </h2>
       {subtitle && (
