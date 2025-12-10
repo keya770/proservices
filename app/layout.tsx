@@ -13,7 +13,8 @@ const poppins = Poppins({
 
 const siteName = "HCT Services | AL HASEL Consultancy Services LLC";
 const siteUrl = "https://example.ae";
-const defaultOgImage = `${siteUrl}/logo.png`;
+const logoPath = "/pro_logo.png";
+const defaultOgImage = `${siteUrl}${logoPath}`;
 const siteTitle = "UAE PRO Services, Visa & Business Setup | Dubai Mainland & Freezone Experts";
 const siteDescription =
   "UAE PRO services, freelance visa UAE, employment visa Dubai, and Dubai business setup by AL HASEL Consultancy (HCT Services) with fast, reliable support.";
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
   description: siteDescription,
   metadataBase: new URL(siteUrl),
   alternates: { canonical: siteUrl },
-  icons: { icon: "/logo.png", apple: "/logo.png" },
+  icons: { icon: logoPath, apple: logoPath },
   openGraph: {
     title: siteTitle,
     description: siteDescription,

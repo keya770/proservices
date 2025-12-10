@@ -28,7 +28,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between gap-4 py-3 sm:py-4">
           <Link href="/" className="flex items-center gap-2">
             <Image
-              src="/logo.png"
+              src="/pro_logo.png"
               alt="HCT Services logo for UAE PRO and visa services"
               width={40}
               height={40}
