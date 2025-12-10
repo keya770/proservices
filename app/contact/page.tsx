@@ -3,13 +3,13 @@ import ContactForm from "@/components/contact-form";
 import SectionTitle from "@/components/section-title";
 
 export const metadata: Metadata = {
-  title: "Contact PRO DESK UAE | Book a Consultation",
+  title: "Contact KEYA PRO DESK UAE | Book a Consultation",
   description:
-    "Contact PRO DESK UAE for PRO services, visa processing, fine waiver help, and business setup in Dubai. Fast response within 24 hours.",
+    "Contact KEYA PRO DESK UAE for PRO services, visa processing, fine waiver help, and business setup in Dubai. Fast response within 24 hours.",
   openGraph: {
-    title: "Contact PRO DESK UAE | Book a Consultation",
+    title: "Contact KEYA PRO DESK UAE | Book a Consultation",
     description:
-      "Reach PRO DESK UAE for UAE PRO services, visa support, and business setup guidance. We respond within one business day.",
+      "Reach KEYA PRO DESK UAE for UAE PRO services, visa support, and business setup guidance. We respond within one business day.",
     url: "https://pro-desk-uae.example.com/contact",
     type: "website",
   },

@@ -27,10 +27,10 @@ const Navbar = () => {
         <div className="flex items-center justify-between gap-4 py-4">
           <Link href="/" className="flex items-center gap-2">
             <div className="rounded-xl bg-[var(--color-gold)] px-2 py-1 text-xs font-semibold text-[var(--color-navy)]">
-              PRO
+              KEYA
             </div>
             <div className="text-lg font-semibold text-slate-900">
-              PRO DESK UAE
+              KEYA PRO DESK UAE
             </div>
           </Link>
 

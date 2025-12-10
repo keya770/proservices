@@ -4,11 +4,11 @@ import SectionTitle from "@/components/section-title";
 import { ShieldCheckIcon, BoltIcon, SparklesIcon } from "@heroicons/react/24/outline";
 
 export const metadata: Metadata = {
-  title: "About PRO DESK UAE | PRO, Visa & Business Setup Specialists",
+  title: "About KEYA PRO DESK UAE | PRO, Visa & Business Setup Specialists",
   description:
-    "Learn about PRO DESK UAE – our mission, values, and team dedicated to smart PRO services, visa processing, and business setup in Dubai.",
+    "Learn about KEYA PRO DESK UAE – our mission, values, and team dedicated to smart PRO services, visa processing, and business setup in Dubai.",
   openGraph: {
-    title: "About PRO DESK UAE | PRO, Visa & Business Setup Specialists",
+    title: "About KEYA PRO DESK UAE | PRO, Visa & Business Setup Specialists",
     description:
       "We combine compliance expertise with concierge-style support for PRO, visa, and company formation services across the UAE.",
     url: "https://pro-desk-uae.example.com/about",
@@ -45,7 +45,7 @@ const AboutPage = () => {
             subtitle="We are a team of PRO and business setup specialists obsessed with making UAE compliance effortless."
           />
           <p className="mt-6 max-w-3xl text-sm text-slate-700 sm:text-base">
-            We built PRO DESK UAE to bridge the gap between fast-growing businesses and complex government processes. Our consultants have guided hundreds of founders, HR teams, and freelancers through visas, fine waivers, and company formation with clarity and confidence.
+            We built KEYA PRO DESK UAE to bridge the gap between fast-growing businesses and complex government processes. Our consultants have guided hundreds of founders, HR teams, and freelancers through visas, fine waivers, and company formation with clarity and confidence.
           </p>
         </div>
       </section>

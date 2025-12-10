@@ -14,7 +14,7 @@ const Footer = () => {
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid gap-10 md:grid-cols-3">
           <div>
-            <div className="text-lg font-semibold text-[var(--color-navy)]">PRO DESK UAE</div>
+            <div className="text-lg font-semibold text-[var(--color-navy)]">KEYA PRO DESK UAE</div>
             <p className="mt-3 text-sm text-slate-600">
               Smart PRO, visa, and business setup support for founders, freelancers, and enterprises
               across the UAE. We manage the paperwork; you focus on growth.
@@ -43,7 +43,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-10 border-t border-slate-200 pt-6 text-sm text-slate-500">
-          © {year} PRO DESK UAE. All rights reserved.
+          © {year} KEYA PRO DESK UAE. All rights reserved.
         </div>
       </div>
     </footer>

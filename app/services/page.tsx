@@ -5,11 +5,11 @@ import { services } from "@/lib/services";
 import { ShieldCheckIcon, DocumentCheckIcon, ClockIcon, ArrowRightIcon } from "@heroicons/react/24/outline";
 
 export const metadata: Metadata = {
-  title: "UAE PRO & Visa Services Overview | PRO DESK UAE",
+  title: "UAE PRO & Visa Services Overview | KEYA PRO DESK UAE",
   description:
     "Explore UAE PRO services, fine waiver applications, freelance and employment visas, and business setup support across Dubai mainland and freezones.",
   openGraph: {
-    title: "UAE PRO & Visa Services Overview | PRO DESK UAE",
+    title: "UAE PRO & Visa Services Overview | KEYA PRO DESK UAE",
     description:
       "Full catalogue of UAE PRO services, visa processing, fine waiver help, and business setup guidance with transparent pricing and fast turnaround.",
     url: "https://pro-desk-uae.example.com/services",

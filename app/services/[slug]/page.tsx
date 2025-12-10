@@ -13,7 +13,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   const service = getServiceBySlug(params.slug);
   if (!service) {
     return {
-      title: "Service not found | PRO DESK UAE",
+      title: "Service not found | KEYA PRO DESK UAE",
     };
   }
 

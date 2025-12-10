@@ -17,11 +17,11 @@ import {
 } from "@heroicons/react/24/outline";
 
 export const metadata: Metadata = {
-  title: "Smart PRO, Visa & Business Setup Services in the UAE | PRO DESK UAE",
+  title: "Smart PRO, Visa & Business Setup Services in the UAE | KEYA PRO DESK UAE",
   description:
     "Premium UAE PRO services, fine waiver applications, freelance and employment visas, and business setup in Dubai. Fast processing, transparent pricing, and dedicated support.",
   openGraph: {
-    title: "Smart PRO, Visa & Business Setup Services in the UAE | PRO DESK UAE",
+    title: "Smart PRO, Visa & Business Setup Services in the UAE | KEYA PRO DESK UAE",
     description:
       "End-to-end UAE PRO and visa services with business setup support. Transparent pricing and dedicated account managers.",
     url: "https://pro-desk-uae.example.com/",

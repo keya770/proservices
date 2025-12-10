@@ -10,7 +10,7 @@ const poppins = Poppins({
   variable: "--font-poppins",
 });
 
-const siteTitle = "PRO Desk UAE | Smart PRO, Visa & Business Setup Services";
+const siteTitle = "KEYA PRO DESK UAE | Smart PRO, Visa & Business Setup Services";
 const siteDescription =
   "Premium UAE PRO services, visa processing, fine waiver assistance, and business setup solutions in Dubai with fast turnaround and dedicated support.";
 
