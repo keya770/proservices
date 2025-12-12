@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# temporary setup files
+SETUP_NGROK.md
+INSTALL_NGROK.md
