@@ -58,7 +58,7 @@ const ContactForm = () => {
         <input
           value={payload.fullName}
           onChange={(e) => handleChange("fullName", e.target.value)}
-          className="w-full rounded-xl border border-slate-200 px-4 py-3 text-sm shadow-sm focus:border-[var(--color-navy)] focus:outline-none"
+          className="w-full rounded-xl border border-slate-200 px-4 py-3 text-sm shadow-sm focus:border-[var(--color-green)] focus:outline-none focus:ring-2 focus:ring-[var(--color-green)]/20"
           placeholder="Your name"
           required
         />
@@ -71,7 +71,7 @@ const ContactForm = () => {
           type="email"
           value={payload.email}
           onChange={(e) => handleChange("email", e.target.value)}
-          className="w-full rounded-xl border border-slate-200 px-4 py-3 text-sm shadow-sm focus:border-[var(--color-navy)] focus:outline-none"
+          className="w-full rounded-xl border border-slate-200 px-4 py-3 text-sm shadow-sm focus:border-[var(--color-green)] focus:outline-none focus:ring-2 focus:ring-[var(--color-green)]/20"
           placeholder="name@email.com"
           required
         />
@@ -83,7 +83,7 @@ const ContactForm = () => {
         <input
           value={payload.phone}
           onChange={(e) => handleChange("phone", e.target.value)}
-          className="w-full rounded-xl border border-slate-200 px-4 py-3 text-sm shadow-sm focus:border-[var(--color-navy)] focus:outline-none"
+          className="w-full rounded-xl border border-slate-200 px-4 py-3 text-sm shadow-sm focus:border-[var(--color-green)] focus:outline-none focus:ring-2 focus:ring-[var(--color-green)]/20"
           placeholder="+971 50 123 4567"
         />
         {errors.phone && <p className="text-xs text-red-600">{errors.phone}</p>}
@@ -94,7 +94,7 @@ const ContactForm = () => {
         <select
           value={payload.service}
           onChange={(e) => handleChange("service", e.target.value)}
-          className="w-full rounded-xl border border-slate-200 px-4 py-3 text-sm shadow-sm focus:border-[var(--color-navy)] focus:outline-none"
+          className="w-full rounded-xl border border-slate-200 px-4 py-3 text-sm shadow-sm focus:border-[var(--color-green)] focus:outline-none focus:ring-2 focus:ring-[var(--color-green)]/20"
           required
         >
           <option value="">Select a service</option>
@@ -112,7 +112,7 @@ const ContactForm = () => {
         <textarea
           value={payload.message}
           onChange={(e) => handleChange("message", e.target.value)}
-          className="w-full rounded-xl border border-slate-200 px-4 py-3 text-sm shadow-sm focus:border-[var(--color-navy)] focus:outline-none"
+          className="w-full rounded-xl border border-slate-200 px-4 py-3 text-sm shadow-sm focus:border-[var(--color-green)] focus:outline-none focus:ring-2 focus:ring-[var(--color-green)]/20"
           rows={4}
           placeholder="Tell us about your requirements"
           required
@@ -122,7 +122,7 @@ const ContactForm = () => {
 
       <button
         type="submit"
-        className="cta-dark w-full rounded-full px-5 py-3 text-sm font-semibold disabled:cursor-not-allowed disabled:opacity-70"
+        className="w-full rounded-full bg-[var(--color-green)] px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-[var(--color-green)]/30 transition hover:bg-[var(--color-green-light)] hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-70"
         disabled={status === "loading"}
       >
         {status === "loading" ? "Sending..." : "Submit enquiry"}

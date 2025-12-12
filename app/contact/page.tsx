@@ -43,26 +43,26 @@ const ContactPage = () => {
       <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-14 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-[1.1fr,0.9fr] lg:items-start">
           <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-lg shadow-slate-100 sm:p-8">
-            <div className="text-sm font-semibold text-[var(--color-navy)]">Contact details</div>
-            <p className="balanced mt-2 text-sm text-slate-600">
-              Reach us via WhatsApp, phone, or email. We will align on timelines, costs, and required documents before any submission. Need a quick overview? See our <Link href="/services" className="text-[var(--color-navy)] underline-offset-4 hover:underline">UAE PRO & visa services</Link> or jump straight to the <Link href="/services/2-years-freelance-visa" className="text-[var(--color-navy)] underline-offset-4 hover:underline">2-year freelance visa UAE</Link> offer.
+            <div className="text-sm font-semibold text-[var(--color-charcoal)]">Contact details</div>
+            <p className="balanced mt-2 text-sm text-[var(--color-charcoal-light)]">
+              Reach us via WhatsApp, phone, or email. We will align on timelines, costs, and required documents before any submission. Need a quick overview? See our <Link href="/services" className="text-[var(--color-green)] underline-offset-4 hover:underline">UAE PRO & visa services</Link> or jump straight to the <Link href="/services/2-years-freelance-visa" className="text-[var(--color-green)] underline-offset-4 hover:underline">2-year freelance visa UAE</Link> offer.
             </p>
-            <div className="mt-6 space-y-3 text-sm text-slate-700">
+            <div className="mt-6 space-y-3 text-sm text-[var(--color-charcoal)]">
               <div>
-                <div className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-gold)]">Phone</div>
-                <div className="text-[var(--color-navy)]">+971 54 542 0537</div>
+                <div className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-green)]">Phone</div>
+                <div className="text-[var(--color-charcoal)]">+971 54 542 0537</div>
               </div>
               <div>
-                <div className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-gold)]">WhatsApp</div>
-                <div className="text-[var(--color-navy)]">+971 54 542 0537</div>
+                <div className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-green)]">WhatsApp</div>
+                <div className="text-[var(--color-charcoal)]">+971 54 542 0537</div>
               </div>
               <div>
-                <div className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-gold)]">Email</div>
-                <div className="text-[var(--color-navy)]">haselconsultancy@gmail.com</div>
+                <div className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-green)]">Email</div>
+                <div className="text-[var(--color-charcoal)]">haselconsultancy@gmail.com</div>
               </div>
               <div>
-                <div className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-gold)]">Office</div>
-                <div className="text-[var(--color-navy)]">
+                <div className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-green)]">Office</div>
+                <div className="text-[var(--color-charcoal)]">
                   P.O Box: 32935, Office 313, Emgate Building, Near Business Bay Metro Station (Sea Side), Dubai, UAE
                 </div>
               </div>

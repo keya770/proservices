@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import Script from "next/script";
 import SectionTitle from "@/components/section-title";
 import { services } from "@/lib/services";
@@ -52,17 +53,29 @@ const ServicesPage = () => {
                 title="UAE PRO & Visa services built for speed"
                 subtitle="Providing 2-year freelance visa at investment pricing plus full PRO, visa, and business setup support."
               />
+              {/* Decorative image */}
+              <div className="relative h-48 w-full rounded-2xl overflow-hidden bg-gradient-to-br from-[var(--color-green)]/10 to-[var(--color-green)]/5 border border-slate-200 mt-6 hidden lg:block">
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <Image 
+                    src={logo} 
+                    alt="UAE PRO Services" 
+                    width={180} 
+                    height={180} 
+                    className="object-contain opacity-15"
+                  />
+                </div>
+              </div>
               <div className="flex flex-wrap gap-3 text-sm text-slate-600">
                 <span className="flex items-center gap-2 rounded-full bg-white px-3 py-2 shadow-sm ring-1 ring-slate-200">
-                  <ShieldCheckIcon className="h-4 w-4 text-[var(--color-navy)]" />
+                  <ShieldCheckIcon className="h-4 w-4 text-[var(--color-green)]" />
                   Compliance-first approach
                 </span>
                 <span className="flex items-center gap-2 rounded-full bg-white px-3 py-2 shadow-sm ring-1 ring-slate-200">
-                  <DocumentCheckIcon className="h-4 w-4 text-[var(--color-navy)]" />
+                  <DocumentCheckIcon className="h-4 w-4 text-[var(--color-green)]" />
                   Clear document checklists
                 </span>
                 <span className="flex items-center gap-2 rounded-full bg-white px-3 py-2 shadow-sm ring-1 ring-slate-200">
-                  <ClockIcon className="h-4 w-4 text-[var(--color-navy)]" />
+                  <ClockIcon className="h-4 w-4 text-[var(--color-green)]" />
                   Fast processing & updates
                 </span>
               </div>
@@ -74,7 +87,7 @@ const ServicesPage = () => {
               </p>
               <Link
                 href="/contact"
-                className="cta-dark mt-4 inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold"
+                className="cta-dark mt-4 inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold bg-[var(--color-green)] hover:bg-[var(--color-green-light)]"
               >
                 <span>Book a consultation</span>
                 <span className="text-base leading-none">↗</span>
@@ -85,30 +98,43 @@ const ServicesPage = () => {
       </section>
 
       <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-14 lg:px-8">
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
             <div
               key={service.slug}
-              className="flex h-full flex-col gap-4 rounded-2xl border border-slate-200 bg-white p-6 shadow-lg shadow-slate-100"
+              className="group relative flex h-full flex-col gap-4 overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 shadow-lg shadow-slate-100 transition hover:-translate-y-1 hover:shadow-2xl hover:border-[var(--color-green)]/30"
             >
+              <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-[var(--color-green)] via-[#1a8a4a] to-[var(--color-green-dark)]" />
+              
+              {/* Service Image */}
+              <div className="relative h-32 w-full rounded-xl overflow-hidden mb-2">
+                <Image 
+                  src="/medium-shot-smiley-business-man.jpg"
+                  alt={service.name}
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-white via-white/50 to-transparent" />
+              </div>
+              
               <div>
-                <div className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-gold)]">
+                <div className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-green)]">
                   {service.tagline}
                 </div>
-                <h2 className="balanced mt-2 text-lg font-semibold text-[var(--color-navy)]">{service.name}</h2>
+                <h2 className="balanced mt-2 text-lg font-semibold text-[var(--color-charcoal)]">{service.name}</h2>
               </div>
-              <p className="balanced text-sm text-slate-600">{service.description}</p>
-              <div className="mt-auto text-sm text-slate-500">
+              <p className="balanced text-sm text-[var(--color-charcoal-light)]">{service.description}</p>
+              <div className="mt-auto text-sm text-[var(--color-charcoal-light)]">
                 <div>
-                  <span className="font-semibold text-[var(--color-navy)]">Processing:</span> {service.processingTime}
+                  <span className="font-semibold text-[var(--color-charcoal)]">Processing:</span> {service.processingTime}
                 </div>
                 <div>
-                  <span className="font-semibold text-[var(--color-navy)]">Starting fee:</span> {service.startingFee}
+                  <span className="font-semibold text-[var(--color-charcoal)]">Starting fee:</span> {service.startingFee}
                 </div>
               </div>
               <Link
                 href={`/services/${service.slug}`}
-                className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-navy)] transition hover:gap-3"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-green)] transition hover:gap-3"
               >
                 View details <ArrowRightIcon className="h-4 w-4" />
               </Link>
