@@ -53,18 +53,6 @@ const ServicesPage = () => {
                 title="UAE PRO & Visa services built for speed"
                 subtitle="Providing 2-year freelance visa at investment pricing plus full PRO, visa, and business setup support."
               />
-              {/* Decorative image */}
-              <div className="relative h-48 w-full rounded-2xl overflow-hidden bg-gradient-to-br from-[var(--color-green)]/10 to-[var(--color-green)]/5 border border-slate-200 mt-6 hidden lg:block">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <Image 
-                    src={logo} 
-                    alt="UAE PRO Services" 
-                    width={180} 
-                    height={180} 
-                    className="object-contain opacity-15"
-                  />
-                </div>
-              </div>
               <div className="flex flex-wrap gap-3 text-sm text-slate-600">
                 <span className="flex items-center gap-2 rounded-full bg-white px-3 py-2 shadow-sm ring-1 ring-slate-200">
                   <ShieldCheckIcon className="h-4 w-4 text-[var(--color-green)]" />

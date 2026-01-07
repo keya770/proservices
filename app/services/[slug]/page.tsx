@@ -113,9 +113,6 @@ const ServicePage = ({ params }: { params: { slug: string } }) => {
       <section className="relative overflow-hidden bg-gradient-to-br from-[var(--color-charcoal)] via-[var(--color-charcoal-light)] to-[var(--color-charcoal-dark)] py-12 text-white sm:py-14">
         <div className="absolute inset-0 bg-gradient-to-br from-[#1E1E1E] via-[#2E2E2E] to-[#1E1E1E] opacity-90" />
         <div className="absolute right-10 top-6 h-40 w-40 rounded-full bg-[var(--color-green)]/15 blur-3xl" />
-        <div className="absolute left-0 top-0 w-64 h-64 opacity-10">
-          <Image src={logo} alt="" width={256} height={256} className="object-contain" />
-        </div>
         <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-green)]">PRO Services</p>
           <h1 className="balanced mt-3 text-3xl font-semibold leading-tight sm:text-4xl">
