@@ -9,8 +9,30 @@ import { ArrowRightIcon } from "@heroicons/react/24/outline";
 export const metadata: Metadata = {
   title: "Blog | UAE PRO Services, Visa & Business Setup Insights | HCT Services",
   description:
-    "Expert insights on UAE PRO services, freelance visas, employment visas, business setup, and compliance. Stay updated with the latest UAE business and visa information.",
+    "Expert insights on UAE PRO services, freelance visas, employment visas, business setup, and compliance. Stay updated with the latest UAE business and visa information from HCT Services.",
+  keywords: [
+    "UAE PRO services blog",
+    "Dubai business setup guide",
+    "freelance visa UAE information",
+    "employment visa Dubai",
+    "UAE visa updates",
+    "Dubai business news",
+    "UAE compliance",
+    "Dubai freezone guide",
+    "UAE business insights",
+  ],
   alternates: { canonical: "https://example.ae/blog" },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Blog | UAE PRO Services, Visa & Business Setup Insights | HCT Services",
     description:
@@ -18,8 +40,9 @@ export const metadata: Metadata = {
     url: "https://example.ae/blog",
     type: "website",
     siteName: "HCT Services | AL HASEL Consultancy Services LLC",
+    locale: "en_US",
     images: [
-      { url: "https://example.ae/og-image.jpg", width: 1200, height: 630, alt: "HCT Services Blog" },
+      { url: "https://example.ae/pro_logo.png", width: 1200, height: 630, alt: "HCT Services Blog" },
     ],
   },
   twitter: {
@@ -27,7 +50,7 @@ export const metadata: Metadata = {
     title: "Blog | UAE PRO Services, Visa & Business Setup Insights | HCT Services",
     description:
       "Expert insights and guides on UAE PRO services, visas, business setup, and compliance.",
-    images: ["https://example.ae/og-image.jpg"],
+    images: ["https://example.ae/pro_logo.png"],
   },
 };
 
@@ -44,7 +67,7 @@ const BlogPage = () => {
         {/* Background Image */}
         <div className="absolute inset-0">
           <BaseImage
-            src="/standard-quality-control-collage-concept.jpg"
+            src="/blog.jpg"
             alt="Blog"
             fill
             className="object-cover opacity-20"

@@ -13,8 +13,28 @@ import {
 export const metadata: Metadata = {
   title: "Contact HCT Services | UAE PRO, Visa & Dubai Business Setup Consultation",
   description:
-    "Call +971 54 542 0537 or email haselconsultancy@gmail.com for UAE PRO services, freelance visa UAE, employment visa Dubai, fine waiver help, and business setup support.",
+    "Call +971 54 542 0537 or email haselconsultancy@gmail.com for UAE PRO services, freelance visa UAE, employment visa Dubai, fine waiver help, and business setup support. Fast response within 24 hours.",
+  keywords: [
+    "contact HCT Services",
+    "UAE PRO services contact",
+    "Dubai business setup consultation",
+    "freelance visa UAE help",
+    "employment visa Dubai support",
+    "UAE visa consultation",
+    "Dubai PRO services phone",
+  ],
   alternates: { canonical: "https://example.ae/contact" },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Contact HCT Services | UAE PRO, Visa & Dubai Business Setup Consultation",
     description:
@@ -22,14 +42,15 @@ export const metadata: Metadata = {
     url: "https://example.ae/contact",
     type: "website",
     siteName: "HCT Services | AL HASEL Consultancy Services LLC",
-    images: [{ url: "https://example.ae/og-image.jpg", width: 1200, height: 630, alt: "Contact HCT Services Dubai" }],
+    locale: "en_US",
+    images: [{ url: "https://example.ae/pro_logo.png", width: 1200, height: 630, alt: "Contact HCT Services Dubai" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Contact HCT Services | UAE PRO, Visa & Dubai Business Setup Consultation",
     description:
       "Talk to HCT Services for UAE PRO services, freelance visa UAE, employment visa Dubai, fine waiver help, and business setup support.",
-    images: ["https://example.ae/og-image.jpg"],
+    images: ["https://example.ae/pro_logo.png"],
   },
 };
 
@@ -43,7 +64,7 @@ const ContactPage = () => {
         {/* Background Image */}
         <div className="absolute inset-0">
           <BaseImage
-            src="/medium-shot-smiley-business-man.jpg"
+            src="/contect-us.jpg"
             alt="Contact HCT Services"
             fill
             className="object-cover opacity-20"
@@ -79,73 +100,121 @@ const ContactPage = () => {
         </div>
       </section>
 
-      {/* Contact Information Cards */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-white via-slate-50 to-white py-12 sm:py-16">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {/* Phone Card */}
-            <a
-              href="tel:+971545420537"
-              className="group relative overflow-hidden rounded-xl border border-slate-200 bg-white p-5 shadow-lg shadow-slate-100/70 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--color-green)]/40 hover:shadow-xl hover:shadow-[var(--color-green)]/10 animate-fade-in-up"
-              style={{ animationDelay: "0.1s", opacity: 0 }}
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-green)]/5 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-              <div className="relative">
-                <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--color-green)]/10 text-[var(--color-green)] ring-1 ring-[var(--color-green)]/30 transition-transform duration-300 group-hover:scale-110">
-                  <PhoneIcon className="h-6 w-6" />
-                </div>
-                <div className="text-xs font-semibold uppercase tracking-[0.1em] text-slate-500 mb-1">Phone</div>
-                <div className="text-sm font-semibold text-[var(--color-charcoal)]">+971 54 542 0537</div>
-              </div>
-            </a>
+      {/* Why Choose Us Section */}
+      <section className="relative overflow-hidden bg-gradient-to-b from-white via-slate-50 to-white py-16 sm:py-20">
+        {/* Background decorative elements */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(15,106,54,0.03),transparent_70%)]" />
+        <div className="absolute top-0 left-0 h-96 w-96 rounded-full bg-[var(--color-green)]/5 blur-3xl" />
+        <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-[var(--color-green)]/5 blur-3xl" />
+        
+        <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 rounded-full bg-[var(--color-green)]/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-green)] ring-1 ring-[var(--color-green)]/30 mb-4">
+              <span className="h-1.5 w-1.5 rounded-full bg-[var(--color-green)] animate-pulse" />
+              Why Choose Us
+            </div>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--color-charcoal)] mb-4">
+              Your Trusted Partner in UAE
+            </h2>
+            <p className="max-w-2xl mx-auto text-lg text-slate-600">
+              Fast, reliable, and transparent PRO services with dedicated support every step of the way.
+            </p>
+          </div>
 
-            {/* WhatsApp Card */}
-            <a
-              href="https://wa.me/971545420537"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative overflow-hidden rounded-xl border border-slate-200 bg-white p-5 shadow-lg shadow-slate-100/70 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--color-green)]/40 hover:shadow-xl hover:shadow-[var(--color-green)]/10 animate-fade-in-up"
-              style={{ animationDelay: "0.2s", opacity: 0 }}
-            >
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {/* Fast Processing */}
+            <div className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-8 shadow-lg shadow-slate-100/50 transition-all duration-300 hover:-translate-y-2 hover:border-[var(--color-green)]/40 hover:shadow-2xl hover:shadow-[var(--color-green)]/10">
               <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-green)]/5 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
               <div className="relative">
-                <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--color-green)]/10 text-[var(--color-green)] ring-1 ring-[var(--color-green)]/30 transition-transform duration-300 group-hover:scale-110">
-                  <ChatBubbleLeftRightIcon className="h-6 w-6" />
+                <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-[var(--color-green)]/10 to-[var(--color-green)]/5 text-[var(--color-green)] ring-2 ring-[var(--color-green)]/20 transition-transform duration-300 group-hover:scale-110 group-hover:ring-[var(--color-green)]/40">
+                  <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
                 </div>
-                <div className="text-xs font-semibold uppercase tracking-[0.1em] text-slate-500 mb-1">WhatsApp</div>
-                <div className="text-sm font-semibold text-[var(--color-charcoal)]">+971 54 542 0537</div>
+                <h3 className="text-xl font-bold text-[var(--color-charcoal)] mb-2">Fast Processing</h3>
+                <p className="text-slate-600 leading-relaxed">
+                  Expedited visa and business setup services with streamlined documentation and quick approvals.
+                </p>
               </div>
-            </a>
+            </div>
 
-            {/* Email Card */}
-            <a
-              href="mailto:haselconsultancy@gmail.com"
-              className="group relative overflow-hidden rounded-xl border border-slate-200 bg-white p-5 shadow-lg shadow-slate-100/70 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--color-green)]/40 hover:shadow-xl hover:shadow-[var(--color-green)]/10 animate-fade-in-up"
-              style={{ animationDelay: "0.3s", opacity: 0 }}
-            >
+            {/* Expert Guidance */}
+            <div className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-8 shadow-lg shadow-slate-100/50 transition-all duration-300 hover:-translate-y-2 hover:border-[var(--color-green)]/40 hover:shadow-2xl hover:shadow-[var(--color-green)]/10">
               <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-green)]/5 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
               <div className="relative">
-                <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--color-green)]/10 text-[var(--color-green)] ring-1 ring-[var(--color-green)]/30 transition-transform duration-300 group-hover:scale-110">
-                  <EnvelopeIcon className="h-6 w-6" />
+                <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-[var(--color-green)]/10 to-[var(--color-green)]/5 text-[var(--color-green)] ring-2 ring-[var(--color-green)]/20 transition-transform duration-300 group-hover:scale-110 group-hover:ring-[var(--color-green)]/40">
+                  <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
                 </div>
-                <div className="text-xs font-semibold uppercase tracking-[0.1em] text-slate-500 mb-1">Email</div>
-                <div className="text-sm font-semibold text-[var(--color-charcoal)] break-all">haselconsultancy@gmail.com</div>
+                <h3 className="text-xl font-bold text-[var(--color-charcoal)] mb-2">Expert Guidance</h3>
+                <p className="text-slate-600 leading-relaxed">
+                  Experienced consultants who understand UAE regulations and guide you through every requirement.
+                </p>
               </div>
-            </a>
+            </div>
 
-            {/* Office Card */}
-            <div className="group relative overflow-hidden rounded-xl border border-slate-200 bg-white p-5 shadow-lg shadow-slate-100/70 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--color-green)]/40 hover:shadow-xl hover:shadow-[var(--color-green)]/10 animate-fade-in-up"
-              style={{ animationDelay: "0.4s", opacity: 0 }}
-            >
+            {/* Transparent Pricing */}
+            <div className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-8 shadow-lg shadow-slate-100/50 transition-all duration-300 hover:-translate-y-2 hover:border-[var(--color-green)]/40 hover:shadow-2xl hover:shadow-[var(--color-green)]/10 sm:col-span-2 lg:col-span-1">
               <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-green)]/5 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
               <div className="relative">
-                <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--color-green)]/10 text-[var(--color-green)] ring-1 ring-[var(--color-green)]/30 transition-transform duration-300 group-hover:scale-110">
-                  <MapPinIcon className="h-6 w-6" />
+                <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-[var(--color-green)]/10 to-[var(--color-green)]/5 text-[var(--color-green)] ring-2 ring-[var(--color-green)]/20 transition-transform duration-300 group-hover:scale-110 group-hover:ring-[var(--color-green)]/40">
+                  <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
                 </div>
-                <div className="text-xs font-semibold uppercase tracking-[0.1em] text-slate-500 mb-1">Office</div>
-                <div className="text-sm font-semibold text-[var(--color-charcoal)] leading-relaxed">
-                  P.O Box: 32935, Office 313, Emgate Building, Near Business Bay Metro Station (Sea Side), Dubai, UAE
+                <h3 className="text-xl font-bold text-[var(--color-charcoal)] mb-2">Transparent Pricing</h3>
+                <p className="text-slate-600 leading-relaxed">
+                  Clear, upfront costs with no hidden fees. Know exactly what you're paying for from day one.
+                </p>
+              </div>
+            </div>
+
+            {/* Dedicated Support */}
+            <div className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-8 shadow-lg shadow-slate-100/50 transition-all duration-300 hover:-translate-y-2 hover:border-[var(--color-green)]/40 hover:shadow-2xl hover:shadow-[var(--color-green)]/10">
+              <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-green)]/5 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+              <div className="relative">
+                <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-[var(--color-green)]/10 to-[var(--color-green)]/5 text-[var(--color-green)] ring-2 ring-[var(--color-green)]/20 transition-transform duration-300 group-hover:scale-110 group-hover:ring-[var(--color-green)]/40">
+                  <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
+                  </svg>
                 </div>
+                <h3 className="text-xl font-bold text-[var(--color-charcoal)] mb-2">Dedicated Support</h3>
+                <p className="text-slate-600 leading-relaxed">
+                  Personal consultant assigned to your case with regular updates via WhatsApp and email.
+                </p>
+              </div>
+            </div>
+
+            {/* Comprehensive Services */}
+            <div className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-8 shadow-lg shadow-slate-100/50 transition-all duration-300 hover:-translate-y-2 hover:border-[var(--color-green)]/40 hover:shadow-2xl hover:shadow-[var(--color-green)]/10">
+              <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-green)]/5 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+              <div className="relative">
+                <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-[var(--color-green)]/10 to-[var(--color-green)]/5 text-[var(--color-green)] ring-2 ring-[var(--color-green)]/20 transition-transform duration-300 group-hover:scale-110 group-hover:ring-[var(--color-green)]/40">
+                  <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-[var(--color-charcoal)] mb-2">Comprehensive Services</h3>
+                <p className="text-slate-600 leading-relaxed">
+                  End-to-end solutions from visa processing to business setup across Dubai mainland and freezones.
+                </p>
+              </div>
+            </div>
+
+            {/* Proven Track Record */}
+            <div className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-8 shadow-lg shadow-slate-100/50 transition-all duration-300 hover:-translate-y-2 hover:border-[var(--color-green)]/40 hover:shadow-2xl hover:shadow-[var(--color-green)]/10">
+              <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-green)]/5 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+              <div className="relative">
+                <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-[var(--color-green)]/10 to-[var(--color-green)]/5 text-[var(--color-green)] ring-2 ring-[var(--color-green)]/20 transition-transform duration-300 group-hover:scale-110 group-hover:ring-[var(--color-green)]/40">
+                  <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-[var(--color-charcoal)] mb-2">Proven Track Record</h3>
+                <p className="text-slate-600 leading-relaxed">
+                  Successfully helped hundreds of entrepreneurs and businesses establish themselves in the UAE.
+                </p>
               </div>
             </div>
           </div>

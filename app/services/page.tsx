@@ -18,8 +18,32 @@ import {
 export const metadata: Metadata = {
   title: "UAE PRO & Visa Services | Corporate PRO Support & Documentation in Dubai",
   description:
-    "Explore UAE PRO services, corporate PRO support, 2-year freelance visa UAE, employment visa Dubai, fine waiver help, and business setup across Dubai mainland and freezones.",
+    "Explore UAE PRO services, corporate PRO support, 2-year freelance visa UAE, employment visa Dubai, fine waiver help, and business setup across Dubai mainland and freezones. Transparent pricing and fast processing.",
+  keywords: [
+    "UAE PRO services",
+    "corporate PRO support",
+    "freelance visa UAE",
+    "2 year freelance visa",
+    "employment visa Dubai",
+    "fine waiver UAE",
+    "Dubai business setup",
+    "Dubai mainland",
+    "Dubai freezone",
+    "UAE visa services",
+    "PRO documentation Dubai",
+  ],
   alternates: { canonical: "https://example.ae/services" },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "UAE PRO & Visa Services | Corporate PRO Support & Documentation in Dubai",
     description:
@@ -27,8 +51,9 @@ export const metadata: Metadata = {
     url: "https://example.ae/services",
     type: "website",
     siteName: "HCT Services | AL HASEL Consultancy Services LLC",
+    locale: "en_US",
     images: [
-      { url: "https://example.ae/og-image.jpg", width: 1200, height: 630, alt: "UAE PRO services catalog in Dubai" },
+      { url: "https://example.ae/pro_logo.png", width: 1200, height: 630, alt: "UAE PRO services catalog in Dubai" },
     ],
   },
   twitter: {
@@ -36,7 +61,7 @@ export const metadata: Metadata = {
     title: "UAE PRO & Visa Services | Corporate PRO Support & Documentation in Dubai",
     description:
       "Corporate PRO support, freelance visa UAE, employment visa Dubai, and Dubai business setup services by AL HASEL Consultancy (HCT Services).",
-    images: ["https://example.ae/og-image.jpg"],
+    images: ["https://example.ae/pro_logo.png"],
   },
 };
 

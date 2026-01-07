@@ -28,16 +28,35 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: post.metaTitle,
     description: post.metaDescription,
+    keywords: [
+      post.category,
+      "UAE PRO services",
+      "Dubai business setup",
+      "UAE visa information",
+      "HCT Services blog",
+    ],
     alternates: { canonical: `https://example.ae/blog/${slug}` },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
     openGraph: {
       title: post.metaTitle,
       description: post.metaDescription,
       url: `https://example.ae/blog/${slug}`,
       type: "article",
       siteName: "HCT Services | AL HASEL Consultancy Services LLC",
+      locale: "en_US",
       images: post.image
         ? [{ url: `https://example.ae${post.image}`, width: 1200, height: 630, alt: post.title }]
-        : [{ url: "https://example.ae/og-image.jpg", width: 1200, height: 630, alt: post.title }],
+        : [{ url: "https://example.ae/pro_logo.png", width: 1200, height: 630, alt: post.title }],
       publishedTime: post.date,
       authors: [post.author],
     },
@@ -45,7 +64,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: "summary_large_image",
       title: post.metaTitle,
       description: post.metaDescription,
-      images: post.image ? [`https://example.ae${post.image}`] : ["https://example.ae/og-image.jpg"],
+      images: post.image ? [`https://example.ae${post.image}`] : ["https://example.ae/pro_logo.png"],
     },
   };
 }

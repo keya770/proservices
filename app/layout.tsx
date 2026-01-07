@@ -4,6 +4,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import WhatsAppFloat from "@/components/whatsapp-float";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -22,15 +23,49 @@ const siteDescription =
 export const metadata: Metadata = {
   title: siteTitle,
   description: siteDescription,
+  keywords: [
+    "UAE PRO services",
+    "Dubai business setup",
+    "freelance visa UAE",
+    "employment visa Dubai",
+    "Dubai mainland",
+    "Dubai freezone",
+    "UAE visa services",
+    "PRO services Dubai",
+    "business setup Dubai",
+    "fine waiver UAE",
+    "HCT Services",
+    "AL HASEL Consultancy",
+  ],
   metadataBase: new URL(siteUrl),
   alternates: { canonical: siteUrl },
-  icons: { icon: logoPath, apple: logoPath },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  icons: {
+    icon: [
+      { url: logoPath, type: "image/png" },
+    ],
+    apple: [
+      { url: logoPath, type: "image/png" },
+    ],
+    shortcut: logoPath,
+  },
   openGraph: {
     title: siteTitle,
     description: siteDescription,
     url: siteUrl,
     type: "website",
     siteName,
+    locale: "en_US",
     images: [
       {
         url: defaultOgImage,
@@ -61,6 +96,7 @@ export default function RootLayout({
           <main className="flex-1">{children}</main>
           <Footer />
         </div>
+        <WhatsAppFloat />
         <Script
           id="ld-local-business"
           type="application/ld+json"

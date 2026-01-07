@@ -14,8 +14,30 @@ import {
 export const metadata: Metadata = {
   title: "About HCT Services | UAE PRO, Visa & Dubai Business Setup Specialists",
   description:
-    "Meet AL HASEL Consultancy (HCT Services) — experts in UAE PRO services, Dubai business setup, freelance visa UAE, and employment visa Dubai support.",
+    "Meet AL HASEL Consultancy (HCT Services) — experts in UAE PRO services, Dubai business setup, freelance visa UAE, and employment visa Dubai support. Fast, reliable, and transparent services.",
+  keywords: [
+    "HCT Services",
+    "AL HASEL Consultancy",
+    "UAE PRO services",
+    "Dubai business setup",
+    "freelance visa UAE",
+    "employment visa Dubai",
+    "Dubai PRO services",
+    "UAE visa experts",
+    "Dubai business consultants",
+  ],
   alternates: { canonical: "https://example.ae/about" },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "About HCT Services | UAE PRO, Visa & Dubai Business Setup Specialists",
     description:
@@ -23,14 +45,15 @@ export const metadata: Metadata = {
     url: "https://example.ae/about",
     type: "profile",
     siteName: "HCT Services | AL HASEL Consultancy Services LLC",
-    images: [{ url: "https://example.ae/og-image.jpg", width: 1200, height: 630, alt: "About HCT Services team in Dubai" }],
+    locale: "en_US",
+    images: [{ url: "https://example.ae/pro_logo.png", width: 1200, height: 630, alt: "About HCT Services team in Dubai" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "About HCT Services | UAE PRO, Visa & Dubai Business Setup Specialists",
     description:
       "Dubai-based PRO services, freelance visa UAE, employment visa Dubai, and business setup experts at AL HASEL Consultancy (HCT Services).",
-    images: ["https://example.ae/og-image.jpg"],
+    images: ["https://example.ae/pro_logo.png"],
   },
 };
 
@@ -77,7 +100,7 @@ const AboutPage = () => {
         {/* Background Image */}
         <div className="absolute inset-0">
           <BaseImage
-            src="/medium-shot-smiley-business-man.jpg"
+            src="/about-us.jpg"
             alt="About HCT Services"
             fill
             className="object-cover opacity-20"

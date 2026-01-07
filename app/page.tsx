@@ -23,8 +23,33 @@ import {
 export const metadata: Metadata = {
   title: "UAE PRO Services, Visa & Business Setup | Dubai Mainland & Freezone Experts",
   description:
-    "UAE PRO services, freelance visa UAE, employment visa Dubai, fine waiver help, and Dubai business setup by AL HASEL Consultancy (HCT Services).",
+    "UAE PRO services, freelance visa UAE, employment visa Dubai, fine waiver help, and Dubai business setup by AL HASEL Consultancy (HCT Services). Fast, reliable PRO services with transparent pricing.",
+  keywords: [
+    "UAE PRO services",
+    "Dubai business setup",
+    "freelance visa UAE",
+    "employment visa Dubai",
+    "Dubai mainland",
+    "Dubai freezone",
+    "UAE visa services",
+    "PRO services Dubai",
+    "business setup Dubai",
+    "fine waiver UAE",
+    "HCT Services",
+    "AL HASEL Consultancy",
+  ],
   alternates: { canonical: "https://example.ae" },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "UAE PRO Services, Visa & Business Setup | Dubai Mainland & Freezone Experts",
     description:
@@ -32,9 +57,10 @@ export const metadata: Metadata = {
     url: "https://example.ae",
     type: "website",
     siteName: "HCT Services | AL HASEL Consultancy Services LLC",
+    locale: "en_US",
     images: [
       {
-        url: "https://example.ae/og-image.jpg",
+        url: "https://example.ae/pro_logo.png",
         width: 1200,
         height: 630,
         alt: "UAE PRO services and Dubai business setup by HCT Services",
@@ -46,7 +72,7 @@ export const metadata: Metadata = {
     title: "UAE PRO Services, Visa & Business Setup | Dubai Mainland & Freezone Experts",
     description:
       "Freelance visa UAE, employment visa Dubai, and Dubai business setup with fast PRO services by AL HASEL Consultancy (HCT Services).",
-    images: ["https://example.ae/og-image.jpg"],
+    images: ["https://example.ae/pro_logo.png"],
   },
 };
 
@@ -344,7 +370,7 @@ export default function Home() {
               <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur-sm shadow-2xl shadow-black/30 group">
                 <div className="relative h-80 sm:h-96 overflow-hidden">
                   <BaseImage
-                    src="/medium-shot-smiley-business-man.jpg"
+                    src="/Dubai Business Setup Mainland vs Freezone Explained.jpg"
                     alt="Business Setup Services"
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-110"

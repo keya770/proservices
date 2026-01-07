@@ -7,6 +7,7 @@ export type Testimonial = {
   name: string;
   location: string;
   message: string;
+  image: string;
 };
 
 export type FeatureHighlight = {
@@ -53,18 +54,21 @@ export const testimonialItems: Testimonial[] = [
     location: "Dubai, UAE",
     message:
       "They handled my freelance visa flawlessly. Clear updates, zero stress, and the Emirates ID arrived exactly when promised.",
+    image: "/1-t.jpg",
   },
   {
     name: "David R.",
     location: "London → Dubai",
     message:
       "Business setup was mapped out step-by-step. Transparent fees and a dedicated consultant made the move seamless.",
+    image: "/3-t.jpg",
   },
   {
     name: "Sara P.",
     location: "Abu Dhabi, UAE",
     message:
       "Our employment visas and fine waiver were sorted quickly. The team is proactive, responsive, and genuinely helpful.",
+    image: "/2-t.jpg",
   },
 ];
 

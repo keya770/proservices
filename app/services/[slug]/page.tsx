@@ -34,8 +34,27 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: service.metaTitle,
     description: service.metaDescription,
+    keywords: [
+      service.name,
+      "UAE PRO services",
+      "Dubai business setup",
+      "freelance visa UAE",
+      "employment visa Dubai",
+      "HCT Services",
+    ],
     alternates: {
       canonical: `https://example.ae/services/${service.slug}`,
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
     },
     openGraph: {
       title: service.metaTitle,
@@ -43,9 +62,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       url: `https://example.ae/services/${service.slug}`,
       type: "article",
       siteName: "HCT Services | AL HASEL Consultancy Services LLC",
+      locale: "en_US",
       images: [
         {
-          url: "https://example.ae/og-image.jpg",
+          url: "https://example.ae/pro_logo.png",
           width: 1200,
           height: 630,
           alt: `${service.name} UAE PRO services`,
@@ -56,7 +76,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       card: "summary_large_image",
       title: service.metaTitle,
       description: service.metaDescription,
-      images: ["https://example.ae/og-image.jpg"],
+      images: ["https://example.ae/pro_logo.png"],
     },
   };
 }
@@ -173,14 +193,14 @@ const ServicePage = async ({ params }: { params: Promise<{ slug: string }> }) =>
                 </div>
               </div>
             </div>
-            <div className="group rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm p-4 shadow-lg shadow-black/20 transition-all duration-300 hover:bg-white/10 hover:border-white/20 hover:-translate-y-1">
+            {/* <div className="group rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm p-4 shadow-lg shadow-black/20 transition-all duration-300 hover:bg-white/10 hover:border-white/20 hover:-translate-y-1">
               <div className="flex items-center gap-3">
                 <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--color-green)]/20 text-[var(--color-green)] ring-1 ring-[var(--color-green)]/30">
                   <SparklesIcon className="h-5 w-5" />
                 </div>
                 
               </div>
-            </div>
+            </div> */}
             <div className="group rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm p-4 shadow-lg shadow-black/20 transition-all duration-300 hover:bg-white/10 hover:border-white/20 hover:-translate-y-1">
               <div className="flex items-center gap-3">
                 <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--color-green)]/20 text-[var(--color-green)] ring-1 ring-[var(--color-green)]/30">

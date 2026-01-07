@@ -42,20 +42,38 @@ const ServiceEnquiryForm = ({ serviceName }: Props) => {
     setStatus("loading");
     setFeedback("");
 
-    // Client-side acknowledgement for static deployment; replace with real endpoint when ready.
-    setTimeout(() => {
-      setStatus("success");
-      setFeedback("Thank you, we'll reach out shortly.");
-      setPayload({
-        fullName: "",
-        email: "",
-        phone: "",
-        company: "",
-        service: serviceName,
-        message: "",
-        agree: false,
+    try {
+      const response = await fetch("/api/service-enquiry", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
       });
-    }, 500);
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        setStatus("success");
+        setFeedback("Thank you! We've received your enquiry and will reach out shortly.");
+        setPayload({
+          fullName: "",
+          email: "",
+          phone: "",
+          company: "",
+          service: serviceName,
+          message: "",
+          agree: false,
+        });
+      } else {
+        setStatus("error");
+        setFeedback(data.error || "Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      setStatus("error");
+      setFeedback("Failed to send enquiry. Please try again or contact us directly.");
+    }
   };
 
   return (
