@@ -1,4 +1,4 @@
-import Image from "next/image";
+import BaseImage from "@/components/base-image";
 import type { Testimonial } from "@/lib/content";
 
 type Props = {
@@ -28,7 +28,7 @@ const TestimonialCard = ({ testimonial }: Props) => {
         <div className="flex items-center gap-4 mb-4">
           <div className="relative flex-shrink-0">
             <div className="relative h-14 w-14 rounded-full overflow-hidden ring-2 ring-[var(--color-green)]/20 group-hover:ring-[var(--color-green)]/40 transition-all duration-300">
-              <Image
+              <BaseImage
                 src="/medium-shot-smiley-business-man.jpg"
                 alt={testimonial.name}
                 fill

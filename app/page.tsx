@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import BaseImage from "@/components/base-image";
 import Script from "next/script";
 import type { Metadata } from "next";
 import Hero from "@/components/hero";
@@ -7,8 +7,10 @@ import ServiceCard from "@/components/service-card";
 import SectionTitle from "@/components/section-title";
 import FAQAccordion from "@/components/faq-accordion";
 import TestimonialCard from "@/components/testimonial-card";
+import BlogCard from "@/components/blog-card";
 import { faqItems, featureHighlights, processSteps, testimonialItems } from "@/lib/content";
 import { services } from "@/lib/services";
+import { getRecentBlogPosts } from "@/lib/blog";
 import {
   BriefcaseIcon,
   ShieldCheckIcon,
@@ -72,27 +74,27 @@ export default function Home() {
   subtitle="Fast, reliable PRO services, visas & business setup in UAE."
   primaryCta={{ label: "Get Consultation", href: "/contact" }}
   secondaryCta={{ label: "View Services", href: "/services" }}
-  highlights={[
+        highlights={[
     "Quick PRO Processing",
     "Freelance & Employment Visas",
     "Business Setup Services",
-  ]}
-/>
+        ]}
+      />
 
 
       <section id="services" className="bg-white py-12 sm:py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <SectionTitle
-            eyebrow="Services"
-            title="Our Core UAE PRO & Visa Services"
-            subtitle="UAE PRO services, Dubai business setup, freelance visa UAE, employment visa Dubai, fine waiver assistance, and corporate documentation support."
+            <SectionTitle
+              eyebrow="Services"
+              title="Our Core UAE PRO & Visa Services"
+              subtitle="UAE PRO services, Dubai business setup, freelance visa UAE, employment visa Dubai, fine waiver assistance, and corporate documentation support."
             align="center"
-          />
+            />
           
           <div className="mt-10 grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-            {services.map((service, index) => {
-              const Icon = serviceIcons[index % serviceIcons.length];
-              return (
+              {services.map((service, index) => {
+                const Icon = serviceIcons[index % serviceIcons.length];
+                return (
                 <div
                   key={service.slug}
                   className="animate-fade-in-up"
@@ -103,9 +105,9 @@ export default function Home() {
                     icon={<Icon className="h-6 w-6" />}
                   />
                 </div>
-              );
-            })}
-          </div>
+                );
+              })}
+            </div>
           
           <div className="mt-10 text-center">
             <Link 
@@ -115,7 +117,7 @@ export default function Home() {
               <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000" />
               <span className="relative z-10">View all UAE PRO & Visa Services</span>
               <span className="relative z-10 text-base transition-transform group-hover:translate-x-1">↗</span>
-            </Link>
+              </Link>
           </div>
         </div>
       </section>
@@ -123,7 +125,7 @@ export default function Home() {
       <section className="relative overflow-hidden bg-gradient-to-br from-[var(--color-charcoal)] via-[var(--color-charcoal-light)] to-[var(--color-charcoal-dark)] py-12 sm:py-16 text-white">
         {/* Background Image */}
         <div className="absolute inset-0">
-          <Image
+          <BaseImage
             src="/medium-shot-smiley-business-man.jpg"
             alt="Why Choose Us"
             fill
@@ -146,13 +148,13 @@ export default function Home() {
         
         <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="mb-12 sm:mb-16">
-            <SectionTitle
-              eyebrow="Why choose us"
-              title="Fast, reliable, professional, and affordable support"
-              subtitle="Your trusted partner for document clearing, PRO services, and business setup needs across Dubai."
-              align="center"
+          <SectionTitle
+            eyebrow="Why choose us"
+            title="Fast, reliable, professional, and affordable support"
+            subtitle="Your trusted partner for document clearing, PRO services, and business setup needs across Dubai."
+            align="center"
               variant="dark"
-            />
+          />
           </div>
           
           {/* Timeline Container */}
@@ -162,14 +164,14 @@ export default function Home() {
             
             {/* Timeline Items */}
             <div className="space-y-6 sm:space-y-8">
-              {featureHighlights.map((feature, index) => {
-                const Icon = featureIcons[index % featureIcons.length];
+            {featureHighlights.map((feature, index) => {
+              const Icon = featureIcons[index % featureIcons.length];
                 const isEven = index % 2 === 0;
                 const isFirst = index === 0;
                 
-                return (
-                  <div
-                    key={feature.title}
+              return (
+                <div
+                  key={feature.title}
                     className={`relative flex flex-col md:flex-row items-center gap-4 md:gap-6 ${
                       isEven ? "md:flex-row" : "md:flex-row-reverse"
                     } animate-fade-in-up`}
@@ -202,11 +204,11 @@ export default function Home() {
                         }`}>
                           <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--color-green)]/20 text-[var(--color-green)] ring-1 ring-[var(--color-green)]/30 shadow-md transition-transform duration-300 group-hover:scale-110">
                             <Icon className="h-5 w-5" />
-                          </div>
+                  </div>
                           <div className="flex-1">
                             <h3 className="text-base sm:text-lg font-semibold text-white mb-1 drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">
-                              {feature.title}
-                            </h3>
+                    {feature.title}
+                  </h3>
                             <div className="h-0.5 w-12 bg-gradient-to-r from-[var(--color-green)] to-transparent" />
                           </div>
                         </div>
@@ -223,9 +225,9 @@ export default function Home() {
 
                     {/* Spacer for mobile - ensures proper alignment */}
                     <div className="hidden md:block flex-1 md:max-w-[45%]" />
-                  </div>
-                );
-              })}
+                </div>
+              );
+            })}
             </div>
           </div>
         </div>
@@ -272,7 +274,7 @@ export default function Home() {
       <section className="relative overflow-hidden bg-gradient-to-br from-[var(--color-charcoal)] via-[var(--color-charcoal-light)] to-[var(--color-charcoal-dark)] py-12 sm:py-16 text-white">
         {/* Background Image */}
         <div className="absolute inset-0">
-          <Image
+          <BaseImage
             src="/medium-shot-smiley-business-man.jpg"
             alt="Dubai Business Setup"
             fill
@@ -320,8 +322,8 @@ export default function Home() {
               
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-3 pt-2">
-                <Link
-                  href="/services/business-setup-mainland-freezone"
+              <Link
+                href="/services/business-setup-mainland-freezone"
                   className="group inline-flex items-center justify-center gap-2 rounded-full bg-[var(--color-green)] px-6 py-3.5 text-sm font-semibold text-white shadow-xl shadow-[var(--color-green)]/50 transition-all duration-300 hover:-translate-y-1 hover:bg-[var(--color-green-light)] hover:shadow-[var(--color-green)]/60 overflow-hidden"
                 >
                   <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000" />
@@ -333,7 +335,7 @@ export default function Home() {
                   className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white/30 bg-white/10 backdrop-blur-sm px-6 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:border-white/50 hover:bg-white/20"
                 >
                   Get Consultation
-                </Link>
+              </Link>
               </div>
             </div>
             
@@ -341,7 +343,7 @@ export default function Home() {
             <div className="animate-fade-in-right animate-delay-200">
               <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur-sm shadow-2xl shadow-black/30 group">
                 <div className="relative h-80 sm:h-96 overflow-hidden">
-                  <Image
+                  <BaseImage
                     src="/medium-shot-smiley-business-man.jpg"
                     alt="Business Setup Services"
                     fill
@@ -354,16 +356,16 @@ export default function Home() {
                     <div className="flex items-center gap-4 mb-4">
                       <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-[var(--color-green)]/20 text-[var(--color-green)] ring-2 ring-[var(--color-green)]/30 backdrop-blur-sm">
                         <ArrowTrendingUpIcon className="h-8 w-8" />
-                      </div>
-                      <div>
+                </div>
+                <div>
                         <div className="text-sm font-semibold text-[var(--color-green)] mb-1">Fast to market</div>
                         <div className="text-2xl font-bold text-white">Launch-ready in days</div>
-                      </div>
-                    </div>
+                </div>
+              </div>
                     <p className="text-sm text-slate-200 leading-relaxed">
                       Typically 5–15 working days with dedicated consultant support and transparent milestones.
                     </p>
-                  </div>
+                </div>
                 </div>
               </div>
             </div>
@@ -379,12 +381,12 @@ export default function Home() {
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="mb-12 sm:mb-16 animate-fade-in-down animate-delay-100">
-            <SectionTitle
+          <SectionTitle
               eyebrow="Testimonials"
-              title="Clients trust us with their UAE journey"
-              subtitle="Real stories from founders, professionals, and teams we support."
-              align="center"
-            />
+            title="Clients trust us with their UAE journey"
+            subtitle="Real stories from founders, professionals, and teams we support."
+            align="center"
+          />
           </div>
 
           {/* Testimonials Grid */}
@@ -427,15 +429,57 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-slate-50 py-12 sm:py-16">
+        {/* Decorative background elements */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(15,106,54,0.04),transparent_40%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,rgba(15,106,54,0.04),transparent_40%)]" />
+        
+        <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-10 sm:mb-12 animate-fade-in-up animate-delay-100">
+            <SectionTitle
+              eyebrow="Blog"
+              title="Latest Insights & Guides"
+              subtitle="Expert articles on UAE PRO services, visas, business setup, and compliance."
+              align="center"
+            />
+          </div>
+
+          {/* Blog Posts Grid */}
+          <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            {getRecentBlogPosts(3).map((post, index) => (
+              <div
+                key={post.slug}
+                className="animate-fade-in-up"
+                style={{ animationDelay: `${0.2 + index * 0.1}s`, opacity: 0 }}
+              >
+                <BlogCard post={post} />
+              </div>
+            ))}
+          </div>
+
+          {/* View All Link */}
+          <div className="mt-10 text-center">
+            <Link 
+              href="/blog" 
+              className="group inline-flex items-center gap-2 rounded-full bg-[var(--color-green)] px-6 py-3 text-sm font-semibold text-white shadow-xl shadow-[var(--color-green)]/50 transition-all duration-300 hover:-translate-y-1 hover:bg-[var(--color-green-light)] hover:shadow-[var(--color-green)]/60 overflow-hidden"
+            >
+              <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000" />
+              <span className="relative z-10">View All Blog Posts</span>
+              <span className="relative z-10 text-base transition-transform group-hover:translate-x-1">↗</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <section className="bg-gradient-to-b from-white to-slate-50 py-12 sm:py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="mb-10 sm:mb-12">
-            <SectionTitle
-              eyebrow="FAQ"
-              title="Frequently Asked Questions"
-              subtitle="Quick answers on PRO services, visas, timelines, and fees."
+              <SectionTitle
+                eyebrow="FAQ"
+                title="Frequently Asked Questions"
+                subtitle="Quick answers on PRO services, visas, timelines, and fees."
               align="center"
-            />
+              />
             <p className="mt-4 text-center text-sm sm:text-base text-[var(--color-charcoal-light)] max-w-2xl mx-auto">
               Need more clarity? We share exact timelines, document checklists, and costs for your case before we start.
             </p>
@@ -498,14 +542,14 @@ export default function Home() {
               <div className="flex-1 space-y-3">
                 <div className="inline-flex items-center gap-2 rounded-full bg-[var(--color-green)]/20 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-green)] ring-1 ring-[var(--color-green)]/30">
                   <span className="h-1.5 w-1.5 rounded-full bg-[var(--color-green)] animate-pulse" />
-                  Start today
-                </div>
+              Start today
+            </div>
                 <h3 className="balanced text-2xl font-bold sm:text-3xl leading-tight">
-                  Ready to start your UAE journey?
-                </h3>
+              Ready to start your UAE journey?
+            </h3>
                 <p className="balanced text-sm sm:text-base text-slate-200 leading-relaxed max-w-2xl">
                   Tell us about your plans. We respond within one business day with next steps. Call/WhatsApp <span className="text-[var(--color-green)] font-semibold">+971 54 542 0537</span> or email <span className="text-[var(--color-green)] font-semibold">haselconsultancy@gmail.com</span>.
-                </p>
+            </p>
                 
                 {/* Contact Info Cards */}
                 <div className="flex flex-wrap gap-3 pt-1">
@@ -528,17 +572,17 @@ export default function Home() {
                     <span>haselconsultancy@gmail.com</span>
                   </a>
                 </div>
-              </div>
+          </div>
               
               <div className="flex-shrink-0">
-                <Link
-                  href="/contact"
+          <Link
+            href="/contact"
                   className="group relative inline-flex items-center justify-center gap-2 rounded-full bg-[var(--color-green)] px-6 py-3 text-sm font-semibold text-white shadow-xl shadow-[var(--color-green)]/50 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[var(--color-green-light)] hover:shadow-2xl hover:shadow-[var(--color-green)]/60 overflow-hidden"
-                >
+          >
                   <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000" />
                   <span className="relative z-10">Talk to Our Team</span>
                   <span className="relative z-10 text-base transition-transform group-hover:translate-x-1">↗</span>
-                </Link>
+          </Link>
               </div>
             </div>
           </div>

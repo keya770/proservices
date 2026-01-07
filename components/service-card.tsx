@@ -1,11 +1,23 @@
 import Link from "next/link";
-import Image from "next/image";
+import BaseImage from "@/components/base-image";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import type { Service } from "@/lib/services";
 
 type Props = {
   service: Pick<Service, "name" | "shortDescription" | "slug" | "tagline">;
   icon?: React.ReactNode;
+};
+
+// Map service slugs to their specific images
+const getServiceImage = (slug: string): string => {
+  const imageMap: Record<string, string> = {
+    "all-pro-services": "/all-pro-services.jpg",
+    "fine-waiver-application": "/fine-waiver-application.jpg",
+    "2-years-freelance-visa": "/2-years-freelance-visa.jpg",
+    "employment-visa": "/employment-visa.jpg",
+    "business-setup-mainland-freezone": "/business-setup.jpg",
+  };
+  return imageMap[slug] || "/medium-shot-smiley-business-man.jpg";
 };
 
 const ServiceCard = ({ service, icon }: Props) => {
@@ -16,8 +28,8 @@ const ServiceCard = ({ service, icon }: Props) => {
       
       {/* Service image - larger and more prominent */}
       <div className="relative h-48 w-full overflow-hidden">
-        <Image
-          src="/medium-shot-smiley-business-man.jpg"
+        <BaseImage
+          src={getServiceImage(service.slug)}
           alt={service.name}
           fill
           className="object-cover transition-transform duration-500 group-hover:scale-110"
@@ -48,13 +60,13 @@ const ServiceCard = ({ service, icon }: Props) => {
         </p>
         
         {/* CTA Link */}
-        <Link
-          href={`/services/${service.slug}`}
+      <Link
+        href={`/services/${service.slug}`}
           className="mt-auto inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-green)] transition-all duration-300 group-hover:gap-3 group/link"
-        >
+      >
           <span>Learn more</span>
           <ArrowRightIcon className="h-4 w-4 transition-transform duration-300 group-hover/link:translate-x-1" />
-        </Link>
+      </Link>
       </div>
       
       {/* Hover effect overlay */}

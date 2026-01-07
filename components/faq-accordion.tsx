@@ -49,11 +49,11 @@ const FAQAccordion = ({ items }: Props) => {
                   ? "bg-[var(--color-green)]/10 rotate-180" 
                   : "bg-slate-100 group-hover:bg-[var(--color-green)]/10"
               }`}>
-                <ChevronDownIcon
+              <ChevronDownIcon
                   className={`h-4 w-4 transition-colors ${
                     isOpen ? "text-[var(--color-green)]" : "text-slate-600"
-                  }`}
-                />
+                }`}
+              />
               </div>
             </button>
             

@@ -1,16 +1,16 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
+import BaseImage from "@/components/base-image";
 import Link from "next/link";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { usePathname } from "next/navigation";
-import logo from "@/public/pro_logo.png";
 
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
   { href: "/about", label: "About" },
+  { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -33,8 +33,8 @@ const Navbar = () => {
           >
             <div className="relative">
               <div className="absolute inset-0 rounded-full bg-[var(--color-green)]/30 blur-md opacity-0 transition group-hover:opacity-100" />
-              <Image
-                src={logo}
+              <BaseImage
+                src="/pro_logo.png"
                 alt="HCT Services logo for UAE PRO and visa services"
                 width={44}
                 height={44}

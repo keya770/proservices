@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import BaseImage from "@/components/base-image";
 
 type CTA = { label: string; href: string; variant?: "primary" | "ghost" };
 
@@ -16,7 +16,7 @@ const Hero = ({ title, subtitle, primaryCta, secondaryCta, highlights = [] }: Pr
     <section className="relative overflow-hidden text-white py-16 sm:py-20 lg:py-24 flex items-center">
       {/* Background Image with parallax effect */}
       <div className="absolute inset-0">
-        <Image
+        <BaseImage
           src="/standard-quality-control-collage-concept.jpg"
           alt="UAE PRO Services Background"
           fill
@@ -107,7 +107,7 @@ const Hero = ({ title, subtitle, primaryCta, secondaryCta, highlights = [] }: Pr
             <div className="glow-card relative rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md p-6 shadow-2xl shadow-black/40 overflow-hidden transition-all duration-500 hover:bg-white/10 hover:border-white/20 hover:shadow-[var(--color-green)]/20">
               {/* Animated background logo */}
               <div className="absolute right-0 top-0 w-40 h-40 opacity-10 animate-[floaty_8s_ease-in-out_infinite]">
-                <Image
+                <BaseImage
                   src="/pro_logo.png"
                   alt=""
                   width={160}
